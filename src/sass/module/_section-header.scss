@@ -1,0 +1,24 @@
+@use "global" as *;
+.section-header {
+text-align: center;
+}
+
+.section-header__title {
+color: $green2;
+font-size: rem(32);
+font-weight: $regular;
+line-height: calc(40 / 32);
+font-family: $en-font;
+}
+
+.section-header__subtitle {
+color: $green;
+font-size: rem(12);
+line-height: calc(18 / 12);
+font-weight: $regular;
+}
+
+.section-header__title-green {
+color: $green;
+text-transform: uppercase;
+}
