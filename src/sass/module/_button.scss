@@ -1,0 +1,90 @@
+@use "global" as *;
+.button {
+    font-size: rem(14);
+    color: $white;
+    line-height: calc(22 / 14);
+    font-weight: $regular;
+    font-family: $en-font;
+    background-color: $green;
+    padding-top: rem(16);
+    padding-bottom: rem(16);
+    padding-left: rem(34);
+    padding-right: rem(74);
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid $green;
+    // z-index: 1;
+    // overflow: hidden;
+}
+
+.button::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    top: rem(4);
+    left: rem(4);
+    position: absolute;
+    z-index: -1;
+    border: 1px solid $green;
+}
+
+.button__arrow {
+    position: relative;
+    display: inline-block;
+    padding-right: rem(20);
+}
+
+.button__arrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translateY(-50%);
+    width: rem(40);
+    height: rem(1);
+    background-color: $white;
+}
+
+.button__arrow::after {
+    content: "";
+    position: absolute;
+    top: 31%;
+    left: 120%;
+    width: rem(13);
+    height: rem(1);
+    background-color: $white;
+    transform: rotate(35deg);
+}
+
+.button__arrow:hover::before,
+.button__arrow:hover::after {
+   background-color: $green;
+}
+
+// .button.bottom-slide {
+//     position: relative;
+//   }
+
+// .button.button-slide::after {
+//     background-color: $white;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     content: "";
+//     width: 100%;
+//     height: 100%;
+//     transform: scale(0, 1);
+//     transform-origin: left top;
+//     transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+//     z-index: -1;
+// }
+// .button.button-slide:hover {
+//     color: $green;
+//     background-color: $white;
+    
+// }
+// .button.button-slide:hover::after {
+//     transform: scale(1, 1);
+// }
