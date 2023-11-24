@@ -9,7 +9,7 @@ font-size: rem(32);
 font-weight: $regular;
 line-height: calc(40 / 32);
 font-family: $en-font;
-@include mq("lg") {
+@include mq("md") {
 font-size: rem(40);
 line-height: calc(40 / 40);
 }

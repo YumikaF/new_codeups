@@ -1,0 +1,78 @@
+@use "global" as *;
+.footer {
+    background-color: $green;
+    padding-top: rem(48);
+    padding-bottom: rem(56);
+    @include mq("md") {
+        padding-top: rem(88);
+        padding-bottom: rem(72);
+    }
+}
+
+
+.footer__inner {
+    @include mq("md") {
+// margin-left: rem(214);
+    }
+}
+
+.footer__logo {
+width: rem(120);
+@include mq("md") {
+display: flex;
+width: rem(200);
+align-items: flex-end;
+}
+}
+
+.footer__sns {
+margin-top: rem(16);
+@include mq("md") {
+margin-bottom: rem(5);
+}
+}
+
+.footer__sns-list {
+display: flex;
+}
+
+.footer__sns-item {
+width: rem(20);
+@include mq("md") {
+width: rem(32);
+}
+}
+
+.footer__sns-item + .footer__sns-item{
+    margin-left: rem(16);
+ }
+
+ .footer__sns-item:first-child {
+    margin-left: rem(40);
+ }
+
+
+
+.footer__nav {
+margin-top: rem(40);
+}
+
+.footer__copy {
+    text-align: center;
+margin-top: rem(40);
+}
+
+.footer__copy-text {
+font-size: rem(12);
+line-height: calc(18 / 12);
+font-weight: $regular;
+font-family: $en-font;
+color: $white;
+@include mq("md") {
+font-size: 14px;
+line-height: calc(18 / 14);
+}
+
+}
+
+

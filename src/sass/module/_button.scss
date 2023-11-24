@@ -58,10 +58,10 @@
     transform: rotate(35deg);
 }
 
-.button__arrow:hover::before,
-.button__arrow:hover::after {
-   background-color: $green;
-}
+// .button.button__arrow:hover::before,
+// .button.button__arrow:hover::after {
+//    background-color: $green;
+// }
 
 // .button.bottom-slide {
 //     position: relative;
