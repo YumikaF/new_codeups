@@ -1,0 +1,39 @@
+@use "global" as *;
+.page-top-button {
+    position: fixed;
+    z-index: 9000;
+    right: rem(15);
+    bottom: rem(16);
+    width: rem(48);
+    height: rem(48);
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+    border: rem(1) solid $green;
+    @include mq("md") {
+        width: rem(80);
+        height: rem(80);
+        bottom: rem(20);
+        right: rem(20);
+    }
+}
+
+.page-top-button::after {
+    position: absolute;
+    top: -9%;
+    left: 47%;
+    width: rem(28);
+    height: rem(28);
+    content: "";
+    background-image: url(../images/common/button-arrow-green.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    transform: rotate(-90deg) translate(-50%, -50%);
+    @include mq("md") {
+        width: rem(40);
+        height: rem(40);
+        top: 0;
+    }
+}

@@ -1,0 +1,89 @@
+@use "global" as *;
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* ビューポートの幅全体 */
+    height: 100vh; /* ビューポートの高さ全体 */
+    overflow: hidden;
+    z-index: 9999;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading img {
+    position: absolute;
+    top: 0;
+    height: 100%; /* 親要素の高さに合わせる */
+    object-fit: cover; /* 画像が見切れないように設定 */
+    opacity: 0;
+    transform-origin: bottom; /* 拡大縮小の基点を下部に設定 */
+}
+
+.loading__img1,
+.loading__img4 {
+    left: 0;
+    width: 100%; /* 全幅 */
+    animation: fadeIn 1s forwards;
+    animation: fadeIn 1s forwards, fadeOut 1s forwards 1s; /* フェードアウトを1秒後に開始 */
+}
+
+.loading__img2 {
+    left: 0;
+    width: 50%; /* 画面の半分の幅 */
+    animation: slideUpExpand 1s forwards 2s;
+}
+
+.loading__img3 {
+    left: 50%;
+    width: 50%;
+    animation: slideUpExpand 1s forwards 2.1s;
+}
+
+.loading__img4 {
+    animation: fadeIn 1s forwards 3.5s;
+}
+
+.loading__title {
+    position: absolute;
+    opacity: 0;
+    animation: fadeIn 1s forwards 3.5s;
+    top: 49%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    @include mq("md") {
+        left: 52%;
+        top: 50%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slideUpExpand {
+    0% {
+        transform: translateY(100%) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,116 @@
+@use "global" as *;
+.voice-card {
+    width: 100%;
+    background-color: $white;
+    box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+    padding-top: rem(15);
+    padding-left: rem(16);
+    padding-right: rem(16);
+    padding-bottom: rem(24);
+    @include mq("md") {
+        max-width: rem(520);
+        padding-top: rem(18);
+        padding-left: rem(24);
+        padding-right: rem(24);
+    }
+}
+
+.voice-card__meta-wrap {
+    display: flex;
+}
+
+.voice-card__meta-items {
+    padding-bottom: rem(2);
+    border-bottom: rem(1) solid $green;
+    margin-right: rem(13);
+    @include mq("md") {
+        margin-right: rem(13);
+        padding-top: rem(31);
+    }
+}
+
+
+.voice-card__animation {
+    // width: 104%;
+    // max-width: 323px;
+    @include mq("md") {
+    }
+}
+
+.voice-card__meta-item {
+    @include mq("md") {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+}
+
+.voice-card__gender-age-info {
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: calc(18 / 12);
+    color: $green2;
+    white-space: nowrap;
+}
+.voice-card__tag {
+    font-size: rem(12);
+    line-height: calc(22 / 12);
+    font-weight: $regular;
+    color: $green;
+    background-color: $white;
+    border: rem(1) solid $green;
+    padding: rem(5) rem(11);
+    white-space: nowrap;
+
+    @include mq("md") {
+        padding: rem(5) rem(15);
+        margin-left: rem(95);
+    }
+}
+
+// .voice-card__tag--licens {
+//     @include mq("md") {
+//         margin-left: rem(102);
+//     }
+// }
+
+// .voice-card__tag--diving {
+//     @include mq("md") {
+//         margin-left: rem(110);
+//     }
+// }
+
+.voice-card__title {
+    font-size: rem(16);
+    font-weight: $medium;
+    color: $green2;
+    margin-top: rem(7);
+    @include mq("md") {
+        font-size: rem(24);
+    }
+}
+
+.voice-card__animation {
+}
+
+.voice-card__img {
+    aspect-ratio: 151 /117;
+    margin-top: rem(8);
+    @include mq("md") {
+        aspect-ratio: 180 / 140;
+    }
+}
+
+.voice-card__body {
+    margin-top: rem(16);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.voice-card__text {
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(24 / 16);
+    color: $green2;
+}

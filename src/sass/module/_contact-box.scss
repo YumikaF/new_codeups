@@ -1,0 +1,48 @@
+@use "global" as *;
+.contact-box {
+}
+
+.contact-box__header {
+    text-align: center;
+}
+
+.contact-box__header-title {
+    font-size: rem(80);
+    line-height: calc(80 / 80);
+    font-weight: $regular;
+    font-family: $en-font;
+    color: $green2;
+}
+
+.contact-box__header-title span {
+    color: $green;
+    text-transform: uppercase;
+}
+
+.contact-box__header-subtitle {
+    font-size: rem(12);
+    line-height: calc(18 / 12);
+    font-weight: $regular;
+    color: $green;
+    margin-top: rem(-7);
+}
+
+.contact-box__contents-text {
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(18 / 14);
+    color: $green;
+    margin-top: rem(8);
+}
+
+.contact-box__button {
+    margin-top: rem(40);
+    text-align: center;
+    margin-right: rem(3);
+    @include mq("md") {
+        margin-right: rem(5);
+    }
+}
+
+.contact-box__button-link {
+}

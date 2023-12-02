@@ -1,0 +1,79 @@
+@use "global" as *;
+.sp-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $green;
+}
+
+.sp-nav__logo {
+    max-width: rem(102);
+    width: 100%;
+    height: rem(80);
+    margin-left: rem(15);
+}
+
+.sp-nav__logo-link {
+}
+
+.sp-nav__logo-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.sp-nav__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: rem(20);
+}
+
+.sp-nav__list--left {
+    padding-left: rem(24);
+}
+
+.sp-nav__list + .sp-nav__list {
+    margin-left: rem(29);
+}
+
+.sp-nav__items + .sp-nav__items {
+    margin-top: rem(32);
+}
+
+.sp-nav__item + .sp-nav__item {
+    margin-top: rem(19);
+}
+
+.sp-nav__item-link {
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(18 / 16);
+    color: $white;
+}
+
+.sp-nav__item--bold {
+    font-weight: $bold;
+    position: relative;
+}
+
+.sp-nav__item--bold::before {
+    position: absolute;
+    content: "";
+    width: rem(18);
+    height: rem(18);
+    background-image: url("../images/common/sp-menu-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 8%;
+    left: rem(-22);
+}
+
+.sp-nav__item-link--sp-show {
+    display: block;
+}

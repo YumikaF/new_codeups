@@ -1,0 +1,121 @@
+@use "global" as *;
+.campaign-card {
+    width: 100%;
+    max-width: rem(280);
+    background-color: $white;
+    box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+    @include mq("md") {
+        max-width: rem(333);
+    }
+}
+
+.campaign-card__img {
+    aspect-ratio: 280 / 188;
+    @include mq("md") {
+        aspect-ratio: 333 / 223;
+    }
+}
+
+.campaign-card__body {
+    padding-top: rem(16);
+    padding-left: rem(16);
+    padding-right: rem(16);
+    padding-bottom: rem(24);
+    @include mq("md") {
+        padding-bottom: rem(40);
+        padding-top: rem(27);
+    }
+}
+
+.campaign-card__body-meta {
+}
+
+.campaign-card-tag {
+    font-size: rem(12);
+    line-height: calc(22 / 12);
+    font-weight: $regular;
+    color: $green;
+    background-color: $white;
+    border: rem(1) solid $green;
+    padding: rem(5) rem(11);
+    @include mq("md") {
+        padding: rem(7) rem(15);
+    }
+}
+
+.campaign-card__title {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    font-weight: $medium;
+    margin-top: rem(8);
+    color: $green2;
+    @include mq("md") {
+        margin-top: rem(10);
+    }
+}
+
+.campaign-card__text {
+    font-size: rem(14);
+    line-height: calc(24 / 14);
+    font-weight: $regular;
+    color: $green2;
+    text-align: center;
+    border-top: rem(1) solid $green;
+    padding-top: rem(8);
+    margin-top: rem(8);
+
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: calc(24 / 16);
+        padding-top: rem(15);
+        padding-left: 0;
+        padding-right: rem(17);
+    }
+}
+
+.campaign-card__text--first {
+    @include mq("md") {
+    }
+}
+
+.campaign-card__price {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: rem(8);
+    align-items: flex-end;
+    @include mq("md") {
+    }
+}
+
+.campaign-card__original-price {
+    font-size: rem(20);
+    line-height: calc(20 / 20);
+    font-weight: $bold;
+    font-family: $number-font;
+    color: $green2;
+    text-decoration: line-through;
+    text-decoration-color: #c94800;
+    margin-bottom: rem(3);
+    @include mq("md") {
+        font-size: rem(24);
+        line-height: calc(24 / 24);
+        padding-bottom: rem(3);
+        text-decoration-thickness: rem(3);
+        margin-bottom: 0;
+    }
+}
+
+.campaign-card__discounted-price {
+    font-size: rem(32);
+    line-height: calc(32 / 32);
+    font-weight: $bold;
+    font-family: $number-font;
+    color: $green;
+    @include mq("md") {
+        width: 100%;
+        max-width: rem(149);
+        font-size: rem(40);
+        line-height: calc(40 / 40);
+        margin-left: rem(8);
+    }
+}

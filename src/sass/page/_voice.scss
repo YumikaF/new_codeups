@@ -1,0 +1,73 @@
+@use "global" as *;
+.voice {
+    padding-top: rem(82);
+    padding-bottom: rem(82);
+    @include mq("md") {
+        padding-top: rem(143);
+        background-image: url("../images/common/voice-bg.png");
+        background-position: left rem(100) top rem(22);
+        background-size: rem(301) rem(138);
+        background-repeat: no-repeat;
+        padding-bottom: rem(76);
+    }
+}
+
+.voice__inner {
+    @include mq("md") {
+        background-image: url("../images/common/voice-bg2.png");
+        background-position: right rem(25) bottom rem(-2);
+        background-size: rem(71) rem(162);
+        background-repeat: no-repeat;
+        padding-bottom: rem(67);
+    }
+}
+
+.voice__header {
+}
+
+.voice__header-title {
+}
+
+.voice__header-subtitle {
+    @include mq("md") {
+        margin-top: rem(3);
+    }
+}
+
+.voice__contents {
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: rem(25);
+    }
+}
+
+.voice__cards {
+    @include mq("md") {
+        display: flex;
+    }
+}
+
+.voice__card {
+    max-width: 100%;
+}
+
+.voice__card + .voice__card {
+    margin-top: rem(40);
+    margin-left: 0;
+    @include mq("md") {
+        margin-top: 0;
+        margin-left: rem(40);
+    }
+}
+
+.voice__button {
+    margin-top: rem(39);
+    text-align: center;
+    margin-right: rem(3);
+    @include mq("md") {
+        margin-top: rem(78);
+    }
+}
+
+.voice__button-link {
+}

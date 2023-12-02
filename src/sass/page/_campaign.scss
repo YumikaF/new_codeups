@@ -1,0 +1,49 @@
+@use "global" as *;
+.campaign {
+    padding-top: rem(40);
+    @include mq("md") {
+        padding-top: rem(120);
+    }
+}
+
+.campaign__inner {
+}
+
+.campaign__header {
+}
+
+.campaign__header-title {
+}
+
+.campaign__header-subtitle {
+    @include mq("md") {
+        margin-top: rem(3);
+    }
+}
+
+.campaign__contents {
+    margin-left: rem(15);
+    @include mq("md") {
+        margin-left: 12.5%;
+    }
+}
+
+.campaign__slick {
+    margin-top: rem(23);
+
+    @include mq("md") {
+        margin-top: rem(36);
+    }
+}
+
+.campaign__button {
+    text-align: center;
+    margin-top: rem(28);
+    margin-right: rem(4);
+    @include mq("md") {
+        margin-top: rem(68);
+    }
+}
+
+.campaign__button-link {
+}

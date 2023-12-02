@@ -1,0 +1,52 @@
+@use "global" as *;
+.contact {
+    padding-top: rem(80);
+    padding-bottom: rem(103);
+    filter: drop-shadow(0 rem(4) rem(4) rgba(0, 0, 0, 0.25));
+    background-image: url("../images/common/background-fish.png");
+    background-position: right rem(15) top rem(54);
+    background-size: rem(109) rem(50);
+    background-repeat: no-repeat;
+
+    @include mq("md") {
+        filter: none;
+        background-position: right rem(50) top rem(100);
+        background-size: rem(301) rem(138);
+        padding-top: rem(140);
+        padding-bottom: rem(160);
+    }
+}
+
+.contact__inner {
+}
+
+.contact__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include mq("md") {
+        box-shadow: rem(4) rem(4) rem(10) 0 rgba(0, 0, 0, 0.25);
+        flex-direction: row;
+        padding-top: rem(80);
+        padding-bottom: rem(80);
+        max-width: rem(1110);
+    }
+}
+
+.contact__info {
+    padding-left: rem(25);
+    padding-right: rem(25);
+    @include mq("md") {
+        padding-right: rem(81);
+        padding-left: rem(50);
+        border-right: rem(1) solid $green;
+    }
+}
+
+.contact__contents {
+    margin-top: rem(40);
+    @include mq("md") {
+        padding-left: rem(81);
+        padding-right: rem(112);
+        margin-top: rem(22);
+    }
+}

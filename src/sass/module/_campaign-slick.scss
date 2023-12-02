@@ -1,0 +1,65 @@
+@use "global" as *;
+.campaign-slick {
+    position: relative;
+}
+
+.campaign-slick__card {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left:0;
+    margin-right: rem(24);
+    @include mq("md") {
+        margin-top: rem(0);
+        margin-bottom: rem(0);
+        margin-left: rem(0);
+        margin-right: rem(40);
+    }
+}
+
+.slick-track {
+}
+
+.slick-list {
+    padding-bottom: rem(10);
+}
+
+.slick-prev.slick-arrow,
+.slick-next.slick-arrow {
+    font-size: 0;
+}
+.slick-prev,
+.slick-next {
+    position: absolute;
+    height: rem(80);
+    width: rem(80);
+    background-color: transparent;
+    border-radius: 50%;
+    border: rem(1) solid $green;
+    top: rem(-107);
+}
+
+.slick-prev {
+    right: rem(340);
+}
+
+.slick-next {
+    right: rem(180);
+}
+.slick-prev:before,
+.slick-next:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(40);
+    height: rem(28);
+    content: "";
+    background-image: url(../images/common/slick-prev-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+}
+
+.slick-next:before {
+    background-image: url(../images/common/slick-next-arrow.png);
+}
