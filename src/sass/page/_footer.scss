@@ -12,8 +12,8 @@
 .footer__inner {
     width: 100%;
     max-width: rem(375);
-    padding-right: rem(14);
-    padding-left: rem(14);
+    padding-right: rem(15);
+    padding-left: rem(15);
     margin-right: auto;
     margin-left: auto;
     @include mq("md") {
@@ -52,6 +52,13 @@
     @include mq("md") {
         width: rem(26);
     }
+}
+
+.footer__sns-item a {
+    transition: opacity 0.3s;
+}
+.footer__sns-item a:hover {
+    opacity: 0.7;
 }
 
 .footer__sns-item + .footer__sns-item {

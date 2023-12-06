@@ -18,10 +18,10 @@
     position: absolute;
     z-index: 10;
     top: 49%;
-    left: 53%;
+    left: 50%;
     transform: translate(-50%, -50%);
     @include mq("md") {
-        left: 52%;
+        left: 50%;
         top: 50%;
     }
 }
@@ -32,10 +32,12 @@
     font-family: $number-font;
     letter-spacing: 0.54em;
     color: $white;
+    text-indent: 0.54em;
     @include mq("md") {
         font-size: rem(80);
         line-height: 1.17;
         letter-spacing: 0.52em;
+        text-indent: 0.54em;
         margin-right: rem(18);
     }
 }
@@ -45,12 +47,10 @@
     font-weight: $regular;
     font-family: $en-font;
     color: $white;
-    // text-align: center;
     line-height: 1;
-    margin-left: rem(53);
+    // margin-left: rem(53);
+    text-align: center;
     @include mq("md") {
-        text-align: center;
-        margin-right: rem(60);
         margin-left: 0;
         margin-top: rem(9);
     }

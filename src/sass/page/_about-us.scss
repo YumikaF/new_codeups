@@ -15,6 +15,7 @@
 }
 
 .about-us__inner {
+    max-width: rem(600);
     @include mq("md") {
         padding-bottom: rem(154);
     }
@@ -89,6 +90,7 @@ margin-top: rem(24);
         position: absolute;
         bottom: 0;
         right: 0;
+        object-fit: cover;
     }
 }
 

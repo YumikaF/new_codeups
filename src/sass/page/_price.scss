@@ -43,20 +43,18 @@
 }
 
 .price__img {
-    @include mq("md") {
-        max-width: rem(492);
-        margin-left: rem(91);
-    }
-}
-
-.price__body picture {
     width: 100%;
     height: auto;
     object-fit: cover;
-
     @include mq("md") {
+        max-width: 492px;
+        width: 100%;
+        margin-left: rem(91);
+        aspect-ratio: 492 / 746;
     }
 }
+
+
 
 .price__responsive-img {
     width: 100%;
@@ -68,7 +66,8 @@
     margin-top: rem(40);
     @include mq("md") {
         margin-top: 0;
-        width: 91%;
+        width: 100%;
+    max-width: 496px;
     }
 }
 
@@ -109,6 +108,7 @@
     color: $green2;
     text-align: right;
     padding-top: rem(6);
+    padding-left: rem(30);
     @include mq("md") {
         font-size: rem(16);
         line-height: calc(24 / 16);

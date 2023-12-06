@@ -3,8 +3,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* ビューポートの幅全体 */
-    height: 100vh; /* ビューポートの高さ全体 */
+    width: 100vw; 
+    height: 100vh; 
     overflow: hidden;
     z-index: 9999;
     background: $white;
@@ -16,33 +16,37 @@
 .loading img {
     position: absolute;
     top: 0;
-    height: 100%; /* 親要素の高さに合わせる */
-    object-fit: cover; /* 画像が見切れないように設定 */
+    height: 100%; 
+    object-fit: cover; 
     opacity: 0;
-    transform-origin: bottom; /* 拡大縮小の基点を下部に設定 */
+    transform-origin: bottom; 
 }
 
 .loading__img1,
 .loading__img4 {
+    object-fit: cover;
     left: 0;
-    width: 100%; /* 全幅 */
+    width: 100%; 
     animation: fadeIn 1s forwards;
-    animation: fadeIn 1s forwards, fadeOut 1s forwards 1s; /* フェードアウトを1秒後に開始 */
+    animation: fadeIn 1s forwards, fadeOut 1s forwards 1s; 
 }
 
 .loading__img2 {
+    object-fit: cover;
     left: 0;
-    width: 50%; /* 画面の半分の幅 */
+    width: 50%;
     animation: slideUpExpand 1s forwards 2s;
 }
 
 .loading__img3 {
+    object-fit: cover;
     left: 50%;
     width: 50%;
     animation: slideUpExpand 1s forwards 2.1s;
 }
 
 .loading__img4 {
+    object-fit: cover;
     animation: fadeIn 1s forwards 3.5s;
 }
 

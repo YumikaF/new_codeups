@@ -71,6 +71,7 @@ margin-right: 0;
 .contact-info__map-img {
     aspect-ratio: 295 / 160;
     margin-inline: auto;
+    object-fit: cover;
     @include mq("md") {
         aspect-ratio: 273/ 148;
         margin-inline: 0;

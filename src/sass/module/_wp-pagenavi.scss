@@ -1,0 +1,32 @@
+@use "global" as *;
+.wp-pagenavi {
+margin-top: rem(80);
+text-align: center;
+}
+.wp-pagenavi a,
+.wp-pagenavi span {
+    color: $green;
+    background-color: $white;
+    border: solid 1px $green;
+    padding: rem(9) rem(14);
+    margin: 0 rem(6);
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    font-size: 16px;
+    font-weight: $bold;
+    font-family: $number-font;
+}
+.wp-pagenavi a:hover {
+    color: $white;
+    background-color: $green;
+    border-color: $green;
+}
+.wp-pagenavi span.current {
+    color: $white;
+    background-color: $green;
+    border-color: $green;
+    font-weight: bold;
+}

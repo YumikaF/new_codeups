@@ -55,6 +55,11 @@
     line-height: calc(18 / 16);
     color: $white;
     white-space: nowrap;
+    transition: opacity 0.3s;
+}
+
+.footer-nav__item-link:hover {
+    opacity: 0.7;
 }
 
 .footer-nav__item--bold {

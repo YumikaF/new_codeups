@@ -1,6 +1,7 @@
 @use "global" as *;
 .campaign-slick {
     position: relative;
+  
 }
 
 .campaign-slick__card {
@@ -21,6 +22,8 @@
 
 .slick-list {
     padding-bottom: rem(10);
+    padding-left: rem(7);
+    display: grid;
 }
 
 .slick-prev.slick-arrow,
@@ -36,6 +39,8 @@
     border-radius: 50%;
     border: rem(1) solid $green;
     top: rem(-107);
+    transition: opacity 0.3s;
+  
 }
 
 .slick-prev {
@@ -62,4 +67,9 @@
 
 .slick-next:before {
     background-image: url(../images/common/slick-next-arrow.png);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    opacity: 0.7;
 }

@@ -27,12 +27,15 @@ const swiper = new Swiper(".swiper", {
 
 
 // キャンペーンのslick
+
+
 $(function () {
     $(".js-campaign-slick").slick({
         autoplay: false, // 自動再生を無効
         infinite: false, // 無限ループを無効
         centerMode: false, // センターモードを無効
-
+        centerPadding: '0px', // 左に揃えるためのパディング設定
+        variableWidth: true, // このオプションを有効化
         slidesToShow: 3, // 一度に表示するスライドの数
         slidesToScroll: 1, // 矢印ボタンで一度にスクロールするスライドの数
         arrows: true, // PCでの矢印ボタン操作を有効
@@ -55,54 +58,50 @@ $(function () {
     });
 });
 
-// $(function () {
-//     $(".js-campaign-slick").slick({
-//         autoplay: false, // 自動再生を無効
-//         infinite: false, // 無限ループを無効
-//   centerMode: false,
-
-//         slidesToShow: 3, // 一度に表示するスライドの数
-//         slidesToScroll: 1, // 矢印ボタンで一度にスクロールするスライドの数
-//         arrows: true, // PCでの矢印ボタン操作を有効
-//         swipe: true, // スマートフォンでのスワイプ操作を有効
-//         pauseOnFocus: false, // フォーカス時の一時停止を無効
-//         pauseOnHover: false, // ホバー時の一時停止を無効
-//         responsive: [
-//             {
-//                 breakpoint: 768, // 768px以下のデバイスでの設定
-//                 settings: {
-//                     infinite: true, // 無限ループを有効
-
-//                     slidesToShow: 1, // スマートフォンでは一度に表示するスライドの数を1枚に設定
-//                     arrows: false, // スマートフォンでは矢印ボタンを非表示
-//                     swipe: true, // タッチデバイスでのスワイプ操作を有効
-//                 },
-//             },
-//         ],
-//     });
-// });
 
 // ページトップボタン
 $(function () {
     const pageTop = $(".js-page-top");
+
     pageTop.hide();
-    $(window).scroll(function () {
+
+    $(window).on("scroll", function () {
+        var footHeight = $("footer").innerHeight(); // フッターの高さを取得
+        var scrollHeight = $(document).height();
+        var scrollPosition = $(window).height() + $(window).scrollTop();
+        var fromBottom = 20; // フッター上のスペース（20px）
+
+        // スクロール量に応じてトップボタンの表示・非表示を切り替える
         if ($(this).scrollTop() > 500) {
             pageTop.fadeIn();
         } else {
             pageTop.fadeOut();
         }
+
+        // ページ下部でボタンの位置を調整
+        if (scrollHeight - scrollPosition <= footHeight + fromBottom) {
+            // フッター手前でボタンをフッターの上部20pxに固定
+            pageTop.css({
+                position: "fixed",
+                bottom: (footHeight + fromBottom - (scrollHeight - scrollPosition)) + "px"
+            });
+        } else {
+            // それ以外の場合は固定位置にして、画面下から20px上に保つ
+            pageTop.css({
+                position: "fixed",
+                bottom: fromBottom + "px"
+            });
+        }
     });
+
     pageTop.click(function () {
-        $("body, html").animate(
-            {
-                scrollTop: 0,
-            },
-            300
-        );
+        $("body, html").animate({ scrollTop: 0 }, 300);
         return false;
     });
 });
+
+
+
 
 // ローディング画面
 $(function () {

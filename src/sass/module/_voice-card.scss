@@ -9,7 +9,7 @@
     padding-bottom: rem(24);
     @include mq("md") {
         max-width: rem(520);
-        padding-top: rem(18);
+        padding-top: rem(12);
         padding-left: rem(24);
         padding-right: rem(24);
     }
@@ -23,6 +23,8 @@
     padding-bottom: rem(2);
     border-bottom: rem(1) solid $green;
     margin-right: rem(13);
+    max-width: rem(276);
+    width: 100%;
     @include mq("md") {
         margin-right: rem(13);
         padding-top: rem(31);
@@ -34,6 +36,7 @@
     // width: 104%;
     // max-width: 323px;
     @include mq("md") {
+        width: 100%;
     }
 }
 
@@ -41,9 +44,14 @@
     @include mq("md") {
         display: flex;
         align-items: flex-end;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+        // grid-gap: 10px;
     }
 }
+
+
 
 .voice-card__gender-age-info {
     font-size: rem(12);
@@ -64,21 +72,11 @@
 
     @include mq("md") {
         padding: rem(5) rem(15);
-        margin-left: rem(95);
+        margin-left: rem(102);
     }
 }
 
-// .voice-card__tag--licens {
-//     @include mq("md") {
-//         margin-left: rem(102);
-//     }
-// }
 
-// .voice-card__tag--diving {
-//     @include mq("md") {
-//         margin-left: rem(110);
-//     }
-// }
 
 .voice-card__title {
     font-size: rem(16);
@@ -94,6 +92,7 @@
 }
 
 .voice-card__img {
+    object-fit: cover;
     aspect-ratio: 151 /117;
     margin-top: rem(8);
     @include mq("md") {

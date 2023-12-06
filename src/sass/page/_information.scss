@@ -10,6 +10,7 @@
 }
 
 .information__inner {
+    max-width: rem(600);
 }
 
 .information__header {
@@ -17,14 +18,14 @@
 
 .information__header-title {
     @include mq("md") {
-        margin-right: rem(7);
+        text-indent: -0.2em;
     }
 }
 
 .information__header-subtitle {
     @include mq("md") {
+        text-indent: -0.5em;
         margin-top: rem(3);
-        margin-right: rem(6);
     }
 }
 
@@ -36,8 +37,13 @@
     }
 }
 
+.information__animation {
+    max-width:rem(540);
+}
+
 .information__img {
     aspect-ratio: 345 / 227;
+    object-fit: cover;
     @include mq("md") {
         aspect-ratio: 540 / 358;
         width: calc(540 / 1080 * 100%);
@@ -54,6 +60,8 @@
         margin-left: rem(48);
         margin-top: 0;
         margin-bottom: rem(7);
+        width: 492px;
+        max-width: 100%;
     }
 }
 

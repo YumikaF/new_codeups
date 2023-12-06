@@ -72,9 +72,6 @@
     z-index: 1;
 }
 
-.button--blue:hover::after {
-    background-color: $blue;
-}
 
 .button:hover span::after {
     background-image: url(../images/common/button-arrow-green.png);

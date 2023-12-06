@@ -1,0 +1,32 @@
+@use "global" as *;
+.campaign-mv {
+width: 100%;
+height: rem(460);
+background-image: url(../images/common/campaign-sp-mv.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+aspect-ratio: 375 / 460;
+
+
+@include mq("md") {
+height: rem(548);
+}
+}
+
+.campaign-mv__inner {
+    height: inherit;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.campaign-mv__title {
+font-size: rem(40);
+font-weight: $regular;
+font-family: $number-font;
+color: $white;
+
+}
+

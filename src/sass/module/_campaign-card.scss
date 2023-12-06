@@ -11,6 +11,7 @@
 
 .campaign-card__img {
     aspect-ratio: 280 / 188;
+    object-fit: cover;
     @include mq("md") {
         aspect-ratio: 333 / 223;
     }
@@ -49,6 +50,9 @@
     font-weight: $medium;
     margin-top: rem(8);
     color: $green2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     @include mq("md") {
         margin-top: rem(10);
     }
@@ -63,6 +67,8 @@
     border-top: rem(1) solid $green;
     padding-top: rem(8);
     margin-top: rem(8);
+  
+
 
     @include mq("md") {
         font-size: rem(16);
@@ -73,10 +79,7 @@
     }
 }
 
-.campaign-card__text--first {
-    @include mq("md") {
-    }
-}
+
 
 .campaign-card__price {
     display: flex;
