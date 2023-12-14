@@ -9,6 +9,29 @@ $(function () {
         $(this).toggleClass("is-active");
         // ナビゲーションメニューの表示・非表示を切り替える
         $(".js-sp-nav").fadeToggle();
+
+        // 現在のbodyタグのoverflowスタイルを確認
+        if ($("body").css("overflow") === "hidden") {
+            // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+            $("body").css({ height: "", overflow: "" });
+        } else {
+            // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+            $("body").css({ height: "100%", overflow: "hidden" });
+        }
+    });
+});
+
+$(function () {
+    // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+    $(".l-drawer-btn").click(function () {
+        // 現在のbodyタグのoverflowスタイルを確認
+        if ($("body").css("overflow") === "hidden") {
+            // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+            $("body").css({ height: "", overflow: "" });
+        } else {
+            // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+            $("body").css({ height: "100%", overflow: "hidden" });
+        }
     });
 });
 
@@ -24,17 +47,14 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-
-
 // キャンペーンのslick
-
 
 $(function () {
     $(".js-campaign-slick").slick({
         autoplay: false, // 自動再生を無効
-        infinite: false, // 無限ループを無効
+        infinite: true, // 無限ループを無効
         centerMode: false, // センターモードを無効
-        centerPadding: '0px', // 左に揃えるためのパディング設定
+        centerPadding: "0px", // 左に揃えるためのパディング設定
         variableWidth: true, // このオプションを有効化
         slidesToShow: 3, // 一度に表示するスライドの数
         slidesToScroll: 1, // 矢印ボタンで一度にスクロールするスライドの数
@@ -42,12 +62,14 @@ $(function () {
         swipe: true, // スマートフォンでのスワイプ操作を有効
         pauseOnFocus: false, // フォーカス時の一時停止を無効
         pauseOnHover: false, // ホバー時の一時停止を無効
+        prevArrow: $(".custom-prev"),
+        nextArrow: $(".custom-next"),
         responsive: [
             {
                 breakpoint: 768, // 768px以下のデバイスでの設定
                 settings: {
                     centerMode: false, // センターモードを無効
-                    centerPadding: '0px', // 左に揃えるためのパディング設定
+                    centerPadding: "0px", // 左に揃えるためのパディング設定
 
                     slidesToShow: 1, // スマートフォンでは一度に表示するスライドの数を1枚に設定
                     arrows: false, // スマートフォンでは矢印ボタンを非表示
@@ -57,7 +79,6 @@ $(function () {
         ],
     });
 });
-
 
 // ページトップボタン
 $(function () {
@@ -83,13 +104,17 @@ $(function () {
             // フッター手前でボタンをフッターの上部20pxに固定
             pageTop.css({
                 position: "fixed",
-                bottom: (footHeight + fromBottom - (scrollHeight - scrollPosition)) + "px"
+                bottom:
+                    footHeight +
+                    fromBottom -
+                    (scrollHeight - scrollPosition) +
+                    "px",
             });
         } else {
             // それ以外の場合は固定位置にして、画面下から20px上に保つ
             pageTop.css({
                 position: "fixed",
-                bottom: fromBottom + "px"
+                bottom: fromBottom + "px",
             });
         }
     });
@@ -100,13 +125,10 @@ $(function () {
     });
 });
 
-
-
-
 // ローディング画面
 $(function () {
     // アニメーションの総持続時間を設定（秒単位）
-    var totalAnimationTime = 7; // 例: 1秒のフェードイン + 1秒のフェードアウト + 5秒のその他のアニメーション
+    var totalAnimationTime = 3; // 例: 1秒のフェードイン + 1秒のフェードアウト + 5秒のその他のアニメーション
 
     // 指定された時間が経過した後にローディング要素を非表示にする
     setTimeout(function () {
@@ -148,5 +170,34 @@ $(function () {
     });
 });
 
+// サイドバーのアコーディオン
+$(function () {
+    $(".js-accordion__item:first-child .js-accordion__content").css(
+        "display",
+        "block"
+    );
+    $(".js-accordion__item:first-child .js-accordion__title").addClass(
+        "is-open"
+    );
+    $(".js-accordion__title").on("click", function () {
+        $(this).toggleClass("is-open");
+        $(this).next().slideToggle(300);
+    });
+});
 
-
+// モーダルウィンドウ
+$(function () {
+    const open = $(".js-modal-open"),
+      close = $(".js-modal__close"),
+      modal = $(".js-modal");
+  
+    //開くボタンをクリックしたらモーダルを表示する
+    open.on("click", function () {
+      modal.addClass("is-open");
+    });
+  
+    //閉じるボタンをクリックしたらモーダルを閉じる
+    close.add(modal).on("click", function () {
+      modal.removeClass("is-open");
+    });
+  });
