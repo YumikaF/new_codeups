@@ -38,9 +38,7 @@
 .contact-box__button {
     margin-top: rem(40);
     text-align: center;
-    margin-right: rem(3);
     @include mq("md") {
-        margin-right: rem(5);
     }
 }
 

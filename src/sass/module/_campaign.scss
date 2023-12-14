@@ -1,0 +1,47 @@
+@use "global" as *;
+.campaign {
+   
+}
+
+.campaign__inner {
+position: relative;
+}
+
+.campaign__header {
+}
+
+.campaign__header-title {
+}
+
+.campaign__header-subtitle {
+    @include mq("md") {
+        margin-top: rem(3);
+    }
+}
+
+.campaign__contents {
+margin-right: calc(50% - 50vw);
+
+}
+
+
+
+
+.campaign__slick {
+    margin-top: rem(23);
+
+    @include mq("md") {
+        margin-top: rem(36);
+    }
+}
+
+.campaign__button {
+    text-align: center;
+    margin-top: rem(28);
+    @include mq("md") {
+        margin-top: rem(68);
+    }
+}
+
+.campaign__button-link {
+}

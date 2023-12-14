@@ -5,16 +5,27 @@
     padding-bottom: rem(82);
     background-color: $blue;
     @include mq("md") {
-        padding-top: rem(100);
-        padding-bottom: rem(100);
-        background-image: url(../images/common/background-fish.png);
-        background-position: left rem(100) bottom rem(60);
-        background-size: rem(437) rem(201);
-        background-repeat: no-repeat;
+      position: relative;
     }
 }
 
 .price__inner {
+}
+
+.price__inner::before {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(437);
+        height: rem(201);
+        bottom: rem(24);
+        left: calc(50% - min(48.5vw, 38.75rem));
+
+        background-image: url("../images/common/background-fish.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 .price__header {
@@ -72,64 +83,18 @@
 }
 
 .price__table {
-    width: 100%;
 }
 
-.price__table-title {
-    font-size: rem(16);
-    font-weight: $bold;
-    letter-spacing: -0.031em;
-    line-height: 1;
-    color: $green2;
-    border-bottom: rem(1) solid $green;
-    text-align: left;
-    padding-bottom: rem(8);
-}
 
-.price__table-text {
-    font-size: rem(14);
-    font-weight: $regular;
-    line-height: calc(24 / 14);
-    color: $green2;
-    padding-top: rem(6);
-    text-align: left;
-    @include mq("md") {
-        font-size: rem(16);
-        font-weight: $regular;
-        line-height: calc(24 / 16);
-        margin-top: rem(4);
-    }
-}
 
-.price__table-price {
-    font-size: rem(14);
-    font-weight: $regular;
-    line-height: calc(24 / 14);
-    color: $green2;
-    text-align: right;
-    padding-top: rem(6);
-    padding-left: rem(30);
-    @include mq("md") {
-        font-size: rem(16);
-        line-height: calc(24 / 16);
-    }
-}
 
-.price__table2 th,
-.price__table3 th,
-.price__table4 th {
-    padding-top: rem(37);
-}
 
-// .price__table-head:not(:first-of-type) + tbody {
-//     margin-top: rem(37);
-// }
+
 
 
 .price__button {
     text-align: center;
     margin-top: rem(36);
-    margin-right: rem(3);
     @include mq("md") {
         margin-top: rem(80);
     }

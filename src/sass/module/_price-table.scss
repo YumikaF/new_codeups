@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.price-table {
+}
+
+.price-table__lists {
+}
+
+.price-table__lists-item + .price-table__lists-item {
+    margin-top: rem(40);
+}
+
+.price-table__list-title {
+    font-size: rem(16);
+    font-weight: $bold;
+    letter-spacing: -0.031em;
+    line-height: 1;
+    color: $green2;
+    border-bottom: rem(1) solid $green;
+    text-align: left;
+    padding-bottom: rem(8);
+}
+
+.price-table__list-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price-table__list-text,
+.price-table__list-price {
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(24 / 14);
+    color: $green2;
+    margin-top: rem(9);
+    @include mq("md") {
+        font-size: rem(16);
+        font-weight: $regular;
+        line-height: calc(24 / 16);
+    }
+}
+
+.price-table__list-text {
+    text-align: left;
+    width: 73%;
+}
+
+.price-table__list-price {
+    text-align: right;
+    width: 27%;
+}

@@ -1,15 +1,20 @@
 @use "global" as *;
 .campaign-slick {
-    position: relative;
-  
+
+}
+.slick-initialized .slick-slide {
+    display: grid;
 }
 
 .campaign-slick__card {
+    display: flex;
+    flex-direction: column;
     margin-top: 0;
     margin-bottom: 0;
     margin-left:0;
     margin-right: rem(24);
     @include mq("md") {
+
         margin-top: rem(0);
         margin-bottom: rem(0);
         margin-left: rem(0);
@@ -26,32 +31,33 @@
     display: grid;
 }
 
-.slick-prev.slick-arrow,
-.slick-next.slick-arrow {
-    font-size: 0;
-}
-.slick-prev,
-.slick-next {
-    position: absolute;
-    height: rem(80);
-    width: rem(80);
-    background-color: transparent;
-    border-radius: 50%;
-    border: rem(1) solid $green;
-    top: rem(-107);
-    transition: opacity 0.3s;
+
+
+.custom-prev,
+.custom-next  {
+    @include mq("md") {
+
+        position: absolute;
+        height: rem(80);
+        width: rem(80);
+        background-color: transparent;
+        border-radius: 50%;
+        border: rem(1) solid $green;
+        top: 0;
+        transition: opacity 0.3s;
+    }
   
 }
 
-.slick-prev {
-    right: rem(340);
+.custom-prev {
+    left: 76%;
 }
 
-.slick-next {
-    right: rem(180);
+.custom-next {
+    left: 90%;
 }
-.slick-prev:before,
-.slick-next:before {
+.custom-prev:before,
+.custom-next:before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -65,11 +71,17 @@
     transform: translate(-50%, -50%);
 }
 
-.slick-next:before {
+.custom-next:before {
     background-image: url(../images/common/slick-next-arrow.png);
 }
 
-.slick-prev:hover,
-.slick-next:hover {
+.custom-prev:hover,
+.custom-next:hover {
     opacity: 0.7;
 }
+
+
+
+
+
+

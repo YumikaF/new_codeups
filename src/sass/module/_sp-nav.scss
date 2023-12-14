@@ -8,6 +8,19 @@
     width: 100%;
     height: 100vh;
     background-color: $green;
+    overflow: scroll;
+}
+
+.sp-nav__header {
+  background-color: $green;
+    height: rem(80);
+    padding: 0 rem(15);
+    z-index: 90;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
 }
 
 .sp-nav__logo {
@@ -30,7 +43,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-top: rem(20);
+    margin-top: rem(104);
+    padding-bottom: rem(111);
 }
 
 .sp-nav__list--left {

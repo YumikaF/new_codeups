@@ -6,7 +6,7 @@
 .pc-nav__items {
     height: inherit;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -15,31 +15,40 @@
     height: inherit;
 }
 
-.pc-nav__item + .pc-nav__item {
-    @include mq("md") {
-        margin-left: rem(40);
-    }
-}
+
 
 .pc-nav__item a {
     @include mq("md") {
-        position: relative;
-        font-size: rem(18);
-        font-weight: $regular;
-        font-family: $en-font;
-        line-height: 1.2;
-        color: $white;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-inline: rem(20);
+    }
+}
+
+.pc-nav__item:last-child a {
+    @include mq("md") {
+        padding-right: 0;
+    }
+}
+
+
+
+.pc-nav__item-wrap {
+    @include mq("md") {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
 }
 
-.pc-nav__item a::after {
+.pc-nav__item-wrap::after {
     content: "";
     position: absolute;
-    bottom: rem(16);
+    bottom: rem(-4);
     left: 0;
     width: 100%;
     height: rem(1);
@@ -49,11 +58,19 @@
     transform-origin: center top;
 }
 
-.pc-nav__item a:hover::after {
+.pc-nav__item a:hover .pc-nav__item-wrap::after {
     transform: scale(1, 1);
 }
 
-.pc-nav__item span {
+.pc-nav__item-text-en {
+    color: $white;
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $en-font;
+    line-height: 1.2;
+}
+
+.pc-nav__item-text-ja {
     @include mq("md") {
         font-size: rem(10);
         line-height: calc(15 / 10);
@@ -63,3 +80,4 @@
         margin-right: rem(1);
     }
 }
+

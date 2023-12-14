@@ -15,21 +15,6 @@
     }
 }
 
-.blog::before {
-    @include mq("md") {
-position: absolute;
-    content: "";
-    width: rem(437);
-    height: rem(201);
-    top: rem(24);
-    left: rem(100);
-    background-image: url("../images/common/blog-bg-fish.png");
-    aspect-ratio: 437 / 201;
-    background-size: rem(437) rem(201);
-    background-repeat: no-repeat;
-    }
-}
-
 
 
 .blog__inner {
@@ -43,7 +28,22 @@ position: absolute;
         padding-right: rem(25);
         padding-left: rem(25);
         max-width: rem(1130);
+    }
+}
 
+.blog__inner::before {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(437);
+        height: rem(201);
+        top: rem(24);
+        left: calc(50% - min(48.5vw, 37.75rem));
+        background-image: url("../images/common/blog-bg-fish.png");
+        aspect-ratio: 437 / 201;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
@@ -75,7 +75,7 @@ position: absolute;
     }
 }
 
-.blog__header-title span {
+.blog__header-title::first-letter {
     text-transform: uppercase;
     color: $green;
     @include mq("md") {
@@ -83,23 +83,17 @@ position: absolute;
     }
 }
 
-.blog__contents {
-    margin-top: rem(26);
-    @include mq("md") {
-        margin-top: rem(77);
-    }
-}
-
 .blog__cards {
+    margin-top: rem(26);
     display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr));
     column-gap: rem(40);
+    grid-template-columns: 1fr;
     row-gap: rem(40);
     @include mq("md") {
+        margin-top: rem(77);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
-
-
 
 .blog__card {
     transition: opacity 0.3s;
@@ -109,17 +103,11 @@ position: absolute;
     opacity: 0.7;
 }
 
-
-
-
-
-
 .blog__button {
     text-align: center;
     margin-top: rem(40);
     @include mq("md") {
         margin-top: rem(80);
-        margin-right: rem(5);
     }
 }
 

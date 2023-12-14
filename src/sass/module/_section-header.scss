@@ -22,7 +22,8 @@
     font-weight: $regular;
 }
 
-.section-header__title span {
+.section-header__title::first-letter {
     color: $green;
     text-transform: uppercase;
 }
+
