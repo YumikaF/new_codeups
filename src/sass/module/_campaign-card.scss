@@ -23,8 +23,11 @@
     padding-left: rem(16);
     padding-right: rem(16);
     padding-bottom: rem(24);
-    display: grid;
-    align-items: end;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 
     @include mq("md") {
         padding-bottom: rem(40);
@@ -52,6 +55,7 @@
 
 .campaign-card__title {
     margin-top: rem(4);
+    flex-grow: 1;
 }
 
 .campaign-card__title-text {

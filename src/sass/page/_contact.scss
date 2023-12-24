@@ -2,7 +2,6 @@
 .contact {
     margin-top: rem(80);
     filter: drop-shadow(0 rem(4) rem(4) rgba(0, 0, 0, 0.25));
-    
 
     @include mq("md") {
         filter: none;
