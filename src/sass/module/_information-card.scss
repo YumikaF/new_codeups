@@ -3,6 +3,15 @@
 .information-card {
 }
 
+.information-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include mq("md") {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
 .information-card__img-wrap {
     @include mq("md") {
         max-width: rem(540);
@@ -85,3 +94,11 @@
         margin-left: 0;
     }
 }
+
+.js-tab-content {
+    display: none;
+}
+.js-tab-content.is-active {
+    display: block;
+}
+

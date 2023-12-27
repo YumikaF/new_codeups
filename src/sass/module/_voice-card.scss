@@ -23,9 +23,10 @@
     padding-bottom: rem(2);
     border-bottom: rem(1) solid $green;
     max-width: rem(276);
-    width: 135%;
+    width: 100%;
     @include mq("md") {
         margin-top: rem(31);
+        width: 147%;
     }
 }
 

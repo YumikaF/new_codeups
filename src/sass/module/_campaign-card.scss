@@ -1,6 +1,8 @@
 @use "global" as *;
 .campaign-card {
-    // display: flex;
+    display: flex;
+
+    flex-direction: column;
     width: 100%;
     max-width: rem(280);
     background-color: $white;
@@ -23,7 +25,6 @@
     padding-left: rem(16);
     padding-right: rem(16);
     padding-bottom: rem(24);
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,8 +36,21 @@
     }
 }
 
+.campaign-card__body--wide {
+   
+
+    @include mq("md") {
+        padding: rem(24) rem(24) rem(40);
+       
+    }
+}
+
+.campaign-card__content {
+    display: flex;
+    flex-direction: column;
+}
+
 .campaign-card__body-meta {
-    align-self: start;
 }
 
 .campaign-card__tag {
@@ -66,6 +80,14 @@
     @include mq("md") {
     }
 }
+.campaign-card__title-text--large {
+    
+    @include mq("md") {
+        font-size: rem(24);
+    }
+}
+
+
 
 .campaign-card__price {
     margin-top: rem(8);
@@ -127,10 +149,8 @@
 }
 
 .campaign-card--aside {
-
     max-width: 100%;
 }
-
 
 .campaign-card__img--aside {
     aspect-ratio: 294 / 188;
@@ -138,4 +158,55 @@
 
 .campaign-card__title-text--center {
     text-align: center;
+}
+
+.campaign-card__body-text {
+    @include mq("md") {
+        margin-top: rem(24);
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+.campaign-card__text {
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(24 / 16);
+    color: $green2;
+    flex-grow: 1;
+}
+
+.campaign-card__info {
+    text-align: center;
+    margin-top: rem(32);
+}
+
+.campaign-card__info-time {
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(18 / 16);
+    font-family: $number-font;
+    color: $green;
+}
+
+.campaign-card__info-text {
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(18 / 14);
+    color: $green;
+    margin-top: rem(7);
+}
+
+.campaign-card__info-button {
+    margin-top: rem(16);
+}
+
+.campaign-card__info-button-link {
+}
+
+.campaign-card--wide {
+    @include mq("md") {
+        max-width: rem(520);
+    }
 }

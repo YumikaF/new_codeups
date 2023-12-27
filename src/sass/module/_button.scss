@@ -72,11 +72,46 @@
     z-index: 1;
 }
 
-
 .button:hover span::after {
     background-image: url(../images/common/button-arrow-green.png);
 }
 
 .button:hover::after {
+    transform: scale(1, 1);
+}
+
+.button--white {
+    background-color: $white;
+    color: $green;
+    border: rem(1) solid $white;
+    z-index: 1;
+}
+
+.button--white span::after {
+    background-image: url(../images/common/button-arrow-green.png);
+}
+
+.button--white:hover {
+    background-color: $green;
+    color: $white;
+}
+
+.button--white:hover span::after {
+    background-image: url(../images/common/button-arrow-white.png);
+}
+
+.button--white:hover::after {
+    transform: scale(0, 1);
+}
+
+.button--white::before {
+    border: rem(1) solid $white;
+}
+
+.button--white::after {
+    background-color: $green;
+}
+
+.button--white:hover::after {
     transform: scale(1, 1);
 }
