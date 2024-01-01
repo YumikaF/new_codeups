@@ -19,7 +19,7 @@
     align-items: center;
     padding: 0 rem(15);
     @include mq("md") {
-        padding: 0 rem(40);
+        padding: 0 rem(20) 0 rem(40);
     }
 }
 

@@ -18,7 +18,7 @@
         content: "";
         width: rem(194);
         height: rem(181);
-        right: calc(50% - min(48.5vw, rem(652)));
+        right: calc(50% - min(48.5vw, 39.8125rem));
         bottom: -47px;
         background-image: url("../images/common/about-us-bg.png");
         background-position: center;
@@ -147,5 +147,4 @@
     }
 }
 
-.about-us__button-link {
-}
+

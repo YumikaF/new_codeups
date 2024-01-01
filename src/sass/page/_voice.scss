@@ -4,7 +4,7 @@
 }
 
 .voice__inner {
-    max-width: rem(600);
+    max-width: rem(630);
     @include mq("md") {
         position: relative;
         // padding-bottom: rem(76);
@@ -75,5 +75,3 @@
     }
 }
 
-.voice__button-link {
-}
