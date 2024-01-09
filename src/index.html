@@ -235,15 +235,17 @@
     <section class="campaign top-campaign" id="campaign">
       <div class="campaign__inner inner">
         <div class="campaign__header section-header">
-          <p class="campaign__header-title section-header__title">campaign</p>
-          <h2 class="campaign__header-subtitle section-header__subtitle">キャンペーン</h2>
+          <p class="section-header__title">campaign</p>
+          <h2 class="section-header__subtitle">キャンペーン</h2>
         </div>
         <div class="campaign__contents">
           <button class="custom-prev"></button>
           <button class="custom-next"></button>
           <ul class="campaign__slick campaign-slick js-campaign-slick">
             <li class="campaign-slick__card campaign-card">
-              <img class="campaign-card__img" src="./assets/images/common/campaign1-img.jpg" alt="海中を泳ぐ魚の群れの写真画像" />
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign1-img.jpg" alt="海中を泳ぐ魚の群れの写真画像" />
+              </div>
               <div class="campaign-card__body">
                 <div class="campaign-card__body-meta">
                   <p class="campaign-card__tag">ライセンス講習</p>
@@ -261,7 +263,9 @@
               </div>
             </li>
             <li class="campaign-slick__card campaign-card">
-              <img class="campaign-card__img" src="./assets/images/common/campaign2-img.jpg" alt="海中を泳ぐ魚の群れの写真画像" />
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign2-img.jpg" alt="海中を泳ぐ魚の群れの写真画像" />
+              </div>
               <div class="campaign-card__body">
                 <div class="campaign-card__body-meta">
                   <p class="campaign-card__tag">体験ダイビング</p>
@@ -279,7 +283,9 @@
               </div>
             </li>
             <li class="campaign-slick__card campaign-card">
-              <img class="campaign-card__img" src="./assets/images/common/campaign3-img.jpg" alt="海中を泳ぐ魚の群れの写真画像" />
+              <div class="campaign-card__img" >
+                <img src="./assets/images/common/campaign3-img.jpg" alt="海中を泳ぐ魚の群れの写真画像" />
+              </div>
               <div class="campaign-card__body">
                 <div class="campaign-card__body-meta">
                   <p class="campaign-card__tag">体験ダイビング</p>
@@ -297,7 +303,9 @@
               </div>
             </li>
             <li class="campaign-slick__card campaign-card">
-              <img class="campaign-card__img" src="./assets/images/common/campaign4-img.jpg" alt="海中を泳ぐ魚の群れの写真画像" />
+              <div class="campaign-card__img" >
+                <img src="./assets/images/common/campaign4-img.jpg" alt="海中を泳ぐ魚の群れの写真画像" />
+              </div>
               <div class="campaign-card__body">
                 <div class="campaign-card__body-meta">
                   <p class="campaign-card__tag">ファンダイビング</p>
@@ -326,8 +334,8 @@
     <section class="about-us top-about-us" id="about-us">
       <div class="about-us__inner inner">
         <div class="about-us__header section-header">
-          <p class="about-us__header-title section-header__title">about&nbsp;us</p>
-          <h2 class="about-us__header-subtitle section-header__subtitle">私たちについて</h2>
+          <p class="section-header__title">about&nbsp;us</p>
+          <h2 class="section-header__subtitle">私たちについて</h2>
         </div>
         <div class="about-us__contents">
           <div class="about-us__img-wrap">
@@ -353,8 +361,8 @@
     <section class="information top-information" id="information">
       <div class="information__inner inner">
         <div class="information__header section-header">
-          <p class="information__header-title section-header__title">information</p>
-          <h2 class="information__header-subtitle section-header__subtitle">ダイビング情報</h2>
+          <p class="section-header__title">information</p>
+          <h2 class="section-header__subtitle">ダイビング情報</h2>
         </div>
         <div class="information__contents information-card ">
           <div class="information-card__img-wrap colorbox">
@@ -373,16 +381,18 @@
       </div>
     </section>
     <!-- ブログ -->
-    <section class="blog" id="blog">
+    <section class="top-blog blog" id="blog">
       <div class="blog__inner inner">
-        <div class="blog__header ">
-          <p class="blog__header-title">blog</p>
-          <h2 class="blog__header-subtitle ">ブログ</h2>
+        <div class="blog__header section-header">
+          <p class="section-header__title section-header__title--white">blog</p>
+          <h2 class="section-header__subtitle section-header__subtitle--white">ブログ</h2>
         </div>
         <ul class="blog__cards blog-cards">
           <li class="blog-cards__list blog-card">
             <a href="#">
-              <img class="blog-card__img" src="./assets/images/common/blog-card1-img.jpg" alt="珊瑚礁と青い海" />
+              <div class="blog-card__img">
+                <img src="./assets/images/common/blog-card1-img.jpg" alt="珊瑚礁と青い海" />
+              </div>
               <div class="blog-card__body">
                 <div class="blog-card__body-title">
                   <time class="blog-card__time" datetime="2023-11-17">2023.11/17</time>
@@ -393,9 +403,11 @@
               </div>
             </a>
           </li>
-          <li class="blog__card blog-card">
+          <li class="blog-cards__list blog-card">
             <a href="">
-              <img class="blog-card__img" src="./assets/images/common/blog-card2-img.jpg" alt="海中を泳ぐウミガメ" />
+              <div class="blog-card__img">
+                <img src="./assets/images/common/blog-card2-img.jpg" alt="海中を泳ぐウミガメ" />
+              </div>
               <div class="blog-card__body">
                 <div class="blog-card__body-title">
                   <time class="blog-card__time" datetime="2023-11-17">2023.11/17</time>
@@ -406,9 +418,11 @@
               </div>
             </a>
           </li>
-          <li class="blog__card blog-card">
+          <li class="blog-cards__list blog-card">
             <a href="">
-              <img class="blog-card__img" src="./assets/images/common/blog-card3-img.jpg" alt="珊瑚礁の隙間にいるカクレクマノミの写真" />
+              <div class="blog-card__img" >
+                <img src="./assets/images/common/blog-card3-img.jpg" alt="珊瑚礁の隙間にいるカクレクマノミの写真" />
+              </div>
               <div class="blog-card__body">
                 <div class="blog-card__body-title">
                   <time class="blog-card__time" datetime="2023-11-17">2023.11/17</time>
@@ -430,11 +444,11 @@
     <section class="top-voice voice" id="voice">
       <div class="voice__inner inner">
         <div class="voice__header section-header">
-          <p class="voice__header-title section-header__title">voice</p>
-          <h2 class="voice__header-subtitle section-header__subtitle">お客様の声</h2>
+          <p class="section-header__title">voice</p>
+          <h2 class="section-header__subtitle">お客様の声</h2>
         </div>
         <ul class="voice__cards voice-cards">
-          <li class="voice-card__list voice-card">
+          <li class="voice-cards__list voice-card">
             <div class="voice-card__meta-wrap">
               <div class="voice-card__meta-items">
                 <div class="voice-card__meta-item">
@@ -454,7 +468,7 @@
                 ここにテキストが入ります。ここにテキストが入ります。</p>
             </div>
           </li>
-          <li class="voice__card voice-card">
+          <li class="voice-cards__list voice-card">
             <div class="voice-card__meta-wrap">
               <div class="voice-card__meta-items">
                 <div class="voice-card__meta-item">
@@ -480,11 +494,11 @@
       </div>
     </section>
     <!-- 料金一覧 -->
-    <section class="price" id="price">
+    <section class="top-price price" id="price">
       <div class="price__inner inner">
         <div class="price__header section-header">
-          <p class="price__header-title section-header__title">price</p>
-          <h2 class="price__header-subtitle section-header__subtitle">料金一覧</h2>
+          <p class="section-header__title">price</p>
+          <h2 class="section-header__subtitle">料金一覧</h2>
         </div>
         <div class="price__body">
           <div class="price__img colorbox">
@@ -539,7 +553,7 @@
                   <dd class="price-table__list-price">&yen;24&#44;000</dd>
                   <dt class="price-table__list-text">1日ダイビング(3ダイブ)</dt>
                   <dd class="price-table__list-price">&yen;32&#44;000</dd>
-                  </dl>
+                </dl>
               </li>
             </ul>
           </div>
@@ -551,11 +565,11 @@
       </div>
     </section>
     <!-- コンタクト -->
-    <section class="contact" id="contact">
+    <section class="top-contact contact" id="contact">
       <div class="contact__inner inner">
         <div class="contact__wrapper">
           <div class="contact__info contact-info">
-            <div class="contact__info-header">
+            <div class="contact-info__header">
               <img class="contact-info__header-logo" src='./assets/images/common/contact-logo.svg' alt='ロゴ画像'
                 loading='lazy'>
             </div>
@@ -575,9 +589,9 @@
             </div>
           </div>
           <div class="contact__contents contact-box">
-            <div class="contact-box__header">
-              <p class="contact-box__header-title"><span>c</span>ontact</p>
-              <h2 class="contact-box__header-subtitle">お問合せ</h2>
+            <div class="contact-box__header section-header">
+              <p class="section-header__title section-header__title--large"><span>c</span>ontact</p>
+              <h2 class="section-header__subtitle">お問い合わせ</h2>
               <p class="contact-box__contents-text">ご予約・お問い合わせはコチラ</p>
             </div>
             <div class="contact-box__button">
@@ -589,13 +603,17 @@
       </div>
     </section>
     <!-- ページトップへ戻るボタン -->
-    <div class="page-top-button js-page-top"></div>
+    <div class="page-top-button js-page-top">
+      <a href="#top"></a>
+    </div>
   </main>
   <footer>
     <div class="top-footer footer ">
       <div class="footer__inner inner">
         <div class="footer__logo">
-          <img src="./assets/images/common/logo-codeups.svg" alt="CodeUps" />
+          <div class="footer__logo-img">
+            <img src="./assets/images/common/logo-codeups.svg" alt="CodeUps" />
+          </div>
           <div class="footer__sns">
             <ul class="footer__sns-list">
               <li class="footer__sns-item">
@@ -695,8 +713,7 @@
             </ul>
           </div>
         </nav>
-
-        <div  class="footer__copyright">
+        <div class="footer__copyright">
           <small>
             Copyright&nbsp;&copy;&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.
           </small>

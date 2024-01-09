@@ -31,14 +31,8 @@
 .about-us__header {
 }
 
-.about-us__header-title {
-}
 
-.about-us__header-subtitle {
-    @include mq("md") {
-        margin-top: rem(3);
-    }
-}
+
 
 .about-us__contents {
     margin-top: rem(22);

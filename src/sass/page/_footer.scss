@@ -10,15 +10,20 @@
 }
 
 .footer__inner {
-max-width: rem(375);
+    max-width: rem(375);
 }
 
 .footer__logo {
-    width: rem(120);
     @include mq("md") {
         display: flex;
-        width: rem(200);
         align-items: flex-end;
+    }
+}
+
+.footer__logo img {
+    width: rem(120);
+    @include mq("md") {
+        width: rem(200);
     }
 }
 
@@ -70,8 +75,6 @@ max-width: rem(375);
         width: 83%;
     }
 }
-
-
 
 .footer__copyright {
     text-align: center;

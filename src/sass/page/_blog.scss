@@ -1,16 +1,14 @@
 @use "global" as *;
 .blog {
-    padding-top: rem(80);
     @include mq("md") {
         position: relative;
-padding-top: rem(100);
     }
 }
 
 .blog::before {
     @include mq("md") {
         content: "";
-        background-image: url("/assets/images/common/blog-bg.jpg");
+        background-image: url("../images/common/blog-bg.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -57,29 +55,7 @@ padding-top: rem(100);
     text-align: center;
 }
 
-.blog__header-title {
-    color: $green2;
-    font-size: rem(32);
-    font-weight: $regular;
-    line-height: calc(40 / 32);
-    font-family: $en-font;
-    @include mq("md") {
-        color: $white;
-        font-size: rem(40);
-        line-height: calc(40 / 40);
-    }
-}
 
-.blog__header-subtitle {
-    color: $green;
-    font-size: rem(12);
-    line-height: 2;
-    font-weight: $regular;
-    @include mq("md") {
-        color: $white;
-        margin-top: rem(6);
-    }
-}
 
 .blog__header-title::first-letter {
     text-transform: uppercase;

@@ -18,18 +18,9 @@
 .information__header {
 }
 
-.information__header-title {
-    @include mq("md") {
-        text-indent: -0.2em;
-    }
-}
 
-.information__header-subtitle {
-    @include mq("md") {
-        text-indent: -0.5em;
-        margin-top: rem(3);
-    }
-}
+
+
 
 .information__contents {
     margin-top: rem(24);

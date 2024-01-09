@@ -10,14 +10,9 @@ position: relative;
 .campaign__header {
 }
 
-.campaign__header-title {
-}
 
-.campaign__header-subtitle {
-    @include mq("md") {
-        margin-top: rem(3);
-    }
-}
+
+
 
 .campaign__contents {
 margin-right: calc(50% - 50vw);

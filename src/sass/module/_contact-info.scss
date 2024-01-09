@@ -3,7 +3,7 @@
 .contact-info {
 }
 
-.contact__info-header {
+.contact-info__header {
     border-bottom: rem(1) solid $green;
     padding-bottom: rem(5);
     @include mq("md") {
