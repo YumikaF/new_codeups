@@ -1,0 +1,87 @@
+@use "global" as *;
+.gallery {
+
+}
+
+
+
+.gallery__inner {
+
+}
+
+
+
+.gallery__header {
+
+}
+
+.gallery__header-title {
+
+}
+
+
+
+.gallery__header-subtitle {
+
+}
+
+
+
+
+.gallery__lists {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+gap: rem(8);
+margin-top: rem(40);
+@include mq("md") {
+margin-top: rem(80);
+}
+}
+
+.gallery__list {
+    @include mq("md") {
+display: flex;
+    }
+}
+
+.gallery__list-img-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+}
+
+.gallery__list-img,
+.gallery__list-img-large {
+cursor: pointer;
+}
+
+.gallery__list-img {
+    aspect-ratio: 580 / 369;
+    object-fit: cover;
+}
+
+.gallery__list-img-large {
+    aspect-ratio: 345 / 523;
+    @include mq("md") {
+
+        aspect-ratio: 492 / 746;
+    }
+    object-fit: cover;
+}
+
+.gallery__list-img-wrap--right {
+    margin-top: rem(8);
+    @include mq("md") {
+margin-top: 0;
+        margin-left: rem(8);
+    }
+}
+
+.gallery__list-img-bottom {
+    margin-top: rem(8);
+    @include mq("md") {
+margin-top: 0;
+        margin-left: rem(8);
+    }
+    
+}

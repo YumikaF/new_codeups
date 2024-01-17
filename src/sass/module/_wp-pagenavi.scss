@@ -1,28 +1,29 @@
 @use "global" as *;
 .wp-pagenavi {
-margin-top: rem(80);
-text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: rem(12);
 }
 .wp-pagenavi a,
 .wp-pagenavi span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(38);
+    height: rem(38);
     color: $green;
     background-color: $white;
-    border: solid 1px $green;
-    padding: rem(9) rem(14);
-    margin: 0 rem(6);
-    white-space: nowrap;
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-    font-size: 16px;
+    border: solid rem(1) $green;
+    font-size: rem(16);
     font-weight: $bold;
     font-family: $number-font;
+    transition: 0.3s ease;
 }
 .wp-pagenavi a:hover {
     color: $white;
     background-color: $green;
     border-color: $green;
+
 }
 .wp-pagenavi span.current {
     color: $white;
@@ -30,3 +31,51 @@ text-align: center;
     border-color: $green;
     font-weight: bold;
 }
+
+.previouspostslink {
+    margin-right: rem(28);
+    position: relative;
+}
+
+.nextpostslink {
+    margin-left: rem(28);
+    position: relative;
+}
+
+.wp-pagenavi--pc {
+    display: none;
+    @include mq("md") {
+        display: block;
+    }
+}
+
+.previouspostslink::after {
+    content: "";
+    display: block;
+    width: rem(8);
+    height: rem(16);
+    background-image: url(../images/common/pagenavi-prev.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.nextpostslink::after {
+    content: "";
+    display: block;
+    background-image: url(../images/common/pagenavi-next.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: rem(8);
+    height: rem(16);
+}
+
+.previouspostslink:hover::after {
+    background-image: url(../images/common/pagenavi-prev-white.png); /* ホバー時の画像パス */
+}
+
+.nextpostslink:hover::after {
+    background-image: url(../images/common/pagenavi-next-white.png); /* ホバー時の画像パス */
+}
+

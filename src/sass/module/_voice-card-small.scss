@@ -1,0 +1,27 @@
+@use "global" as *;
+.voice-card-small {
+
+}
+
+.voice-card-small__img {
+    aspect-ratio: 294 / 218;
+    object-fit: cover;
+    }
+    
+    .voice-card-small__body {
+    margin-top: rem(16);
+    }
+    
+    .voice-card-small__age {
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: calc(18 /12);
+    color: $green2;
+    }
+    
+    .voice-card-small__title {
+        font-size: rem(24);
+        font-weight: $medium;
+        color: $green2;
+        margin-top: rem(8);
+    }

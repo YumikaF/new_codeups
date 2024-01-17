@@ -1,0 +1,16 @@
+@use "global" as *;
+.form-error {
+}
+
+.form-error__message {
+    color: #c94800;
+    font-size: rem(14);
+    font-weight: $regular;
+}
+
+.form-error__message-sp {
+    display: block;
+    @include mq("md") {
+        display: none;
+    }
+}

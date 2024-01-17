@@ -21,64 +21,37 @@ $(function () {
     });
 });
 
-$(function () {
-    // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
-    $(".l-drawer-btn").click(function () {
-        // 現在のbodyタグのoverflowスタイルを確認
-        if ($("body").css("overflow") === "hidden") {
-            // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
-            $("body").css({ height: "", overflow: "" });
-        } else {
-            // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
-            $("body").css({ height: "100%", overflow: "hidden" });
-        }
-    });
-});
-
-// スライダー
-const swiper = new Swiper(".swiper", {
+// メインビジュアルのスライダー
+const mvSwiper = new Swiper(".js-mv-swiper", {
     loop: true,
     effect: "fade",
     speed: 3000,
     allowTouchMove: false,
     autoplay: {
         delay: 3000,
-        disableOnInteraction: true, // ユーザー操作後に自動再生を再開しないようにする
+        disableOnInteraction: true,
     },
 });
 
-// キャンペーンのslick
-
-$(function () {
-    $(".js-campaign-slick").slick({
-        autoplay: false, // 自動再生を無効
-        infinite: true, // 無限ループを無効
-        centerMode: false, // センターモードを無効
-        centerPadding: "0px", // 左に揃えるためのパディング設定
-        variableWidth: true, // このオプションを有効化
-        slidesToShow: 3, // 一度に表示するスライドの数
-        slidesToScroll: 1, // 矢印ボタンで一度にスクロールするスライドの数
-        arrows: true, // PCでの矢印ボタン操作を有効
-        swipe: true, // スマートフォンでのスワイプ操作を有効
-        pauseOnFocus: false, // フォーカス時の一時停止を無効
-        pauseOnHover: false, // ホバー時の一時停止を無効
-        prevArrow: $(".custom-prev"),
-        nextArrow: $(".custom-next"),
-        responsive: [
-            {
-                breakpoint: 768, // 768px以下のデバイスでの設定
-                settings: {
-                    centerMode: false, // センターモードを無効
-                    centerPadding: "0px", // 左に揃えるためのパディング設定
-
-                    slidesToShow: 1, // スマートフォンでは一度に表示するスライドの数を1枚に設定
-                    arrows: false, // スマートフォンでは矢印ボタンを非表示
-                    swipe: true, // タッチデバイスでのスワイプ操作を有効
-                },
-            },
-        ],
-    });
+// キャンペーンのスライダー
+const campaignSwiper = new Swiper(".js-campaign-swiper", {
+    loop: true,
+    speed: 2000,
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    breakpoints: {
+        768: {
+            spaceBetween: 40,
+        }
+        
+    },
+    navigation: {
+        nextEl: ".js-campaign-button-next",
+        prevEl: ".js-campaign-button-prev",
+    }
 });
+
+
 
 // ページトップボタン
 $(function () {
@@ -87,10 +60,10 @@ $(function () {
     pageTop.hide();
 
     $(window).on("scroll", function () {
-        var footHeight = $("footer").innerHeight(); // フッターの高さを取得
-        var scrollHeight = $(document).height();
-        var scrollPosition = $(window).height() + $(window).scrollTop();
-        var fromBottom = 20; // フッター上のスペース（20px）
+        let footHeight = $("footer").innerHeight(); // フッターの高さを取得
+        let scrollHeight = $(document).height();
+        let scrollPosition = $(window).height() + $(window).scrollTop();
+        let fromBottom = 20; // フッター上のスペース（20px）
 
         // スクロール量に応じてトップボタンの表示・非表示を切り替える
         if ($(this).scrollTop() > 500) {
@@ -128,7 +101,7 @@ $(function () {
 // ローディング画面
 $(function () {
     // アニメーションの総持続時間を設定（秒単位）
-    var totalAnimationTime = 3; // 例: 1秒のフェードイン + 1秒のフェードアウト + 5秒のその他のアニメーション
+    let totalAnimationTime = 3; // 例: 1秒のフェードイン + 1秒のフェードアウト + 5秒のその他のアニメーション
 
     // 指定された時間が経過した後にローディング要素を非表示にする
     setTimeout(function () {
@@ -139,18 +112,18 @@ $(function () {
 // 画像のアニメーション
 //要素の取得とスピードの設定
 $(function () {
-    var box = $(".colorbox"),
+    let box = $(".colorbox"),
         speed = 700;
 
     // .colorboxの付いた全ての要素に対して下記の処理を行う
     box.each(function () {
-        var $this = $(this); // 現在の要素を変数に格納
+        let $this = $(this); // 現在の要素を変数に格納
 
         // .color要素を追加
         $this.append('<div class="color"></div>');
-        var color = $this.find(".color"),
+        let color = $this.find(".color"),
             image = $this.find("img");
-        var counter = 0;
+        let counter = 0;
 
         image.css("opacity", "0");
         color.css("width", "0%");
@@ -170,7 +143,7 @@ $(function () {
     });
 });
 
-// サイドバーのアコーディオン
+// サイドバーとfaqのアコーディオン
 $(function () {
     $(".js-accordion__item:first-child .js-accordion__content").css(
         "display",
@@ -187,17 +160,37 @@ $(function () {
 
 // モーダルウィンドウ
 $(function () {
-    const open = $(".js-modal-open"),
-      close = $(".js-modal__close"),
-      modal = $(".js-modal");
-  
-    //開くボタンをクリックしたらモーダルを表示する
-    open.on("click", function () {
-      modal.addClass("is-open");
+    const modal = $(".js-modal");
+    const modalImg = $(".modal__img");
+    const header = $(".header"); // ヘッダー要素のクラス名またはID
+
+    // すべての画像にモーダル機能を適用
+    $(".gallery__list-img, .gallery__list-img-large").on("click", function () {
+        const imgSrc = $(this).attr("src");
+        modalImg.attr("src", imgSrc);
+        modal.addClass("is-open");
+        $("body").css("overflow", "hidden");
+        header.hide(); // ヘッダーを非表示にする
     });
-  
-    //閉じるボタンをクリックしたらモーダルを閉じる
-    close.add(modal).on("click", function () {
-      modal.removeClass("is-open");
+
+    // モーダルの背景をクリックして閉じる
+    $(".js-modal-close, .modal").on("click", function () {
+        modal.removeClass("is-open");
+        $("body").css("overflow", "");
+        header.show(); // ヘッダーを表示する
     });
-  });
+});
+
+// informationタブボタン
+$(function () {
+    const tabButton = $(".js-tab-button"),
+        tabContent = $(".js-tab-content");
+    tabButton.on("click", function () {
+        let index = tabButton.index(this);
+
+        tabButton.removeClass("is-active");
+        $(this).addClass("is-active");
+        tabContent.removeClass("is-active");
+        tabContent.eq(index).addClass("is-active");
+    });
+});

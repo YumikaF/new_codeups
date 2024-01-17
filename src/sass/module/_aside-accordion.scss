@@ -1,0 +1,84 @@
+@use "global" as *;
+.archive-aside__accordion {
+
+}
+
+.aside-accordion {
+
+}
+
+
+
+.aside-accordion__lists {
+
+}
+
+
+
+.aside-accordion__lists-title {
+cursor: pointer;
+}
+
+
+.aside-accordion__list {
+    display: none;
+
+}
+.aside-accordion__list:not(:first-child) {
+    text-indent: 3ch;
+}
+
+
+
+.aside-accordion__item {
+
+}
+
+.aside-accordion__lists-title,
+.aside-accordion__list-link {
+    font-size: rem(24);
+    font-weight: $regular;
+    color: $green;
+}
+
+.aside-accordion__lists-title span {
+    padding-left: rem(30);
+    position: relative;
+}
+
+.aside-accordion__list-link span {
+    padding-left: rem(30);
+    position: relative;
+}
+
+.aside-accordion__lists-title span::before {
+    position: absolute;
+    content: "";
+    top: 58%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: rem(11) solid transparent;
+    border-left: rem(11) solid transparent;
+    border-top: rem(18) solid $green;
+    border-bottom: 0;
+}
+
+.aside-accordion__list span::before {
+    position: absolute;
+    content: "";
+    top: 58%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: rem(11) solid transparent;
+    border-bottom: rem(11) solid transparent;
+    border-left: rem(18) solid $green;
+    border-right: 0;
+  }
+
+

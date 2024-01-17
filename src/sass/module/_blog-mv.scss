@@ -1,0 +1,8 @@
+@use "global" as *;
+.blog-mv {
+background-image: url(../images/common/blog-mv-sp-img.jpg);
+@include mq("md") {
+    background-image: url(../images/common/blog-mv-pc-img.jpg);
+
+}
+}

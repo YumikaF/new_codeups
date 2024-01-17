@@ -1,0 +1,101 @@
+@use "global" as *;
+.information-tab {
+    width: 100%;
+}
+
+.information-tab__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.information-tab__button {
+    z-index: 10;
+    // width: rem(102);
+    padding: rem(10) ;
+    cursor: pointer;
+    font-size: rem(14);
+    font-weight: $regular;
+    color: $green;
+    background-color: $blue;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    @include mq("md") {
+        font-size: rem(24);
+        padding: rem(26) rem(30) rem(26) rem(102);
+    }
+}
+
+.information-tab__button span {
+    position: relative;
+}
+
+.information-tab__button span::before {
+    display: none;
+
+    @include mq("md") {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: rem(64);
+        height: rem(64);
+        top: 50%;
+        left: rem(-74);
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.information-tab__button--first span::before {
+    @include mq("md") {
+        background-image: url(../images/common/page-information-icon1-green.png);
+    }
+}
+
+.information-tab__button--second span::before {
+    @include mq("md") {
+        background-image: url(../images/common/page-information-icon2-green.png);
+    }
+}
+.information-tab__button--third span::before {
+    @include mq("md") {
+        background-image: url(../images/common/page-information-icon3-green.png);
+    }
+}
+.information-tab__button--first.is-active span::before {
+    @include mq("md") {
+        background-image: url(../images/common/page-information-icon1-white.png);
+    }
+}
+
+.information-tab__button--second.is-active span::before {
+    @include mq("md") {
+        background-image: url(../images/common/page-information-icon2-white.png);
+    }
+}
+.information-tab__button--third.is-active span::before {
+    @include mq("md") {
+        background-image: url(../images/common/page-information-icon3-white.png);
+    }
+}
+
+.information-tab__button:not(:first-child) {
+    margin-left: 20px;
+}
+
+.information-tab__button.is-active {
+    color: $white;
+    background-color: $green;
+    @include mq("md") {
+        box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+
+
+.sp-show {
+    display: block;
+    @include mq("md") {
+        display: none;
+    }
+}

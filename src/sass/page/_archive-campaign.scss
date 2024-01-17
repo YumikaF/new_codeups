@@ -1,0 +1,70 @@
+@use "global" as *;
+.archive-campaign{
+
+}
+
+
+
+.archive-campaign__inner.inner {
+  margin-inline: auto;
+  padding-left: rem(47);
+  padding-right:  rem(47);
+  max-width: rem(630);
+  @include mq("md") {
+    max-width: rem(1130);
+    padding-left: rem(25);
+    padding-right: rem(25);
+  }
+}
+
+.archive-campaign__inner {
+  position: relative;
+}
+.archive-campaign__inner::before {
+  
+    position: absolute;
+    content: "";
+    width: rem(120);
+    height: rem(55);
+    
+    left: calc(50% - min(44.5vw, 39rem));
+    top: rem(-24);
+    
+    background-image: url("../images/common/voice-bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+        left: calc(50% - min(48.5vw, 39rem));
+      
+    }
+}
+
+
+
+.archive-campaign__cards {
+  margin-top: rem(40);
+
+    display: grid;
+  grid-template-columns:  1fr;
+  row-gap: rem(40);
+  justify-items: center;
+  align-items: stretch;
+
+  @include mq("md") {
+    
+    grid-template-columns: repeat(2, minmax(rem(280), 1fr));
+    column-gap: rem(40);
+    row-gap: rem(80);
+
+  }
+  
+}
+
+.archive-campaign__card {
+
+}

@@ -1,0 +1,8 @@
+@use "global" as *;
+.about-us-mv {
+    background-image: url(../images/common/page-about-us-sp-img.jpg);
+
+    @include mq("md") {
+        background-image: url(../images/common/page-about-us-pc-img.jpg);
+    }
+}

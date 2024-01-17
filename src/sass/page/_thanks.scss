@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.thanks {
+    margin-top: rem(52);
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+}
+
+.thanks__inner {
+    position: relative;
+}
+
+.thanks__inner::before {
+    position: absolute;
+    content: "";
+    width: rem(120);
+    height: rem(55);
+    left: calc(50% - min(44.5vw, 39rem));
+    top: rem(-24);
+    background-image: url("../images/common/voice-bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+        left: calc(50% - min(48.5vw, 39rem));
+}
+}
+
+.thanks__message {
+    text-align: center;
+}
+
+.thanks__message-title {
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(18 / 16);
+    color: $green2;
+}
+
+.thanks__message-text {
+    font-size: rem(16);
+    font-weight: $regular;
+    color: $green2;
+    margin-top: rem(40);
+}
+
+.thanks__message-text--sp {
+    display: block;
+    @include mq("md") {
+        display: none;
+    }
+}

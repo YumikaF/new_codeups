@@ -1,0 +1,42 @@
+@use "global" as *;
+.page-information {
+    margin-top: rem(121);
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+}
+
+.page-information__inner {
+    position: relative;
+}
+
+.page-information__inner::before {
+    content: "";
+    position: absolute;
+    top: rem(-91);
+    left: calc(50% - min(48.5vw, 39rem));
+
+    width: rem(120);
+    height: rem(55);
+    background-image: url(../images/common/voice-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+    }
+}
+
+.page-information__tab {
+}
+
+.page-information__contents {
+    margin-top: rem(16);
+
+    @include mq("md") {
+        margin-top: rem(24);
+    }
+}
+

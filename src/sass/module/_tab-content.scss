@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.tab-content {
+    display: none;
+}
+.tab-content.is-active {
+    display: block;
+}

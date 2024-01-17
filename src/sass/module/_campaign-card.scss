@@ -2,25 +2,23 @@
 .campaign-card {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background-color: $white;
+    width: rem(280);
+    max-width: 100%;
     box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
-    max-width: rem(280);
     @include mq("md") {
-        max-width: rem(333);
+        width: rem(333);
     }
 }
 
-.campaign-card__img {
-    aspect-ratio: 280 / 188;
-    @include mq("md") {
-        aspect-ratio: 333 / 223;
-    }
-}
+
 .campaign-card__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    aspect-ratio: 280 / 188;
+    @include mq("md") {
+        aspect-ratio: 333 / 223;
+    }
 }
 
 .campaign-card__body {

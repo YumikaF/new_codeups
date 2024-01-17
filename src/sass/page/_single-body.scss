@@ -1,0 +1,144 @@
+@use "global" as *;
+.single-body {
+}
+
+.single-body__inner {
+    max-width: rem(630);
+    position: relative;
+}
+
+.single-body__inner::before {
+    position: absolute;
+    content: "";
+    width: rem(120);
+    height: rem(55);
+
+    left: calc(50% - min(44.5vw, 39rem));
+    top: rem(-24);
+
+    background-image: url("../images/common/voice-bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+        left: calc(50% - min(48.5vw, 39rem));
+    }
+}
+
+.single-body__contents {
+    @include mq("md") {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.single-body__time {
+    font-size: rem(14);
+    font-weight: $regular;
+    font-family: $en-font;
+    color: $green2;
+    line-height: calc(18 / 14);
+}
+
+.single-body__title {
+    padding-bottom: rem(4);
+    margin-top: rem(8);
+    border-bottom: rem(1) solid $green;
+    @include mq("md") {
+        font-size: rem(32);
+    }
+}
+.single-body__title h1 {
+    font-size: rem(24);
+    font-weight: $medium;
+    color: $green2;
+
+    @include mq("md") {
+        font-size: rem(32);
+    }
+}
+
+
+
+.single-body__img,
+.single-body__content {
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+
+.single-body__img img,
+.single-body__content img {
+    aspect-ratio: 345 / 231;
+    object-fit: cover;
+}
+
+.single-body__content p {
+    margin-top: rem(24);
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(24 / 16);
+    color: $green2;
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.single-body__content img {
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.single-body__content ul {
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.single-body__content li {
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(24 / 16);
+    color: $green2;
+    padding-left: rem(27);
+    @include mq("md") {
+    }
+}
+
+.single-body__content li span {
+    position: relative;
+}
+.single-body__content li span::before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: rem(18);
+    height: rem(18);
+    background-image: url("../images/common/hitode-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 12%;
+    left: rem(-22);
+}
+
+.single-body__body:nth-child(1) {
+    @include mq("md") {
+        width: 64.8%;
+    }
+}
+.single-body__body:nth-child(2) {
+    @include mq("md") {
+        width: 100%;
+        max-width: rem(294);
+    }
+}

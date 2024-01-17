@@ -1,0 +1,51 @@
+@use "global" as *;
+.faq {
+
+}
+
+.faq__question {
+    padding: rem(16);
+    background-color: $green;
+}
+
+.faq__question-text {
+font-size: rem(16);
+font-weight: $regular;
+color: $white;
+position: relative;
+}
+
+.faq__question-text::after {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    display: block;
+    width: rem(28);
+    height: rem(1);
+    content: "";
+   background-color: $white;
+  }
+
+
+
+.faq__answer {
+
+    padding: 10px 20px;
+    border-right: 1px solid $green;
+    border-bottom: 1px solid $green;
+    border-left: 1px solid $green;
+    @include mq("md") {
+        margin-top: rem(16);
+        border-top: 1px solid $green;
+
+    }
+}
+
+
+
+.faq__answer-text {
+    font-size: rem(16);
+    font-weight: $regular;
+    color: $green2;
+}
+

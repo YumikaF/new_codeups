@@ -1,0 +1,236 @@
+@use "global" as *;
+.form {
+}
+
+.form__list {
+}
+
+.form__item {
+    padding-bottom: rem(24);
+    // 点線の下線を引く
+    border-bottom: 1px dotted $green;
+    @include mq("md") {
+        padding-bottom: rem(40);
+    }
+}
+
+.form__item-wrap {
+    @include mq("md") {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.form__item:not(:first-child):not(:last-child) {
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.form__label {
+    @include mq("md") {
+        width: 31%;
+    }
+}
+
+.form__label-text {
+    font-size: rem(16);
+    font-weight: $bold;
+    color: $green2;
+}
+
+.form__label-text span {
+    position: relative;
+    display: inline-block;
+}
+
+.form__label-text span::after {
+    content: "必須";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + rem(8));
+    transform: translateY(-50%);
+    font-size: rem(12);
+    color: $white;
+    font-weight: $regular;
+    background-color: #c94800;
+    padding: rem(2) rem(14);
+    white-space: nowrap;
+}
+
+.form__input {
+    margin-top: rem(16);
+
+    @include mq("md") {
+        margin-top: 0;
+        width: 69%;
+    }
+}
+
+.form__checkbox-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(4);
+}
+
+.form__checkbox-wrap span {
+    display: inline-block;
+    padding-left: rem(20);
+    font-size: rem(16);
+    font-weight: $regular;
+    color: $green2;
+    position: relative;
+}
+
+.form__checkbox-wrap span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: rem(14);
+    height: rem(14);
+    border: rem(1) solid $green;
+}
+
+.form__checkbox-wrap span::after {
+    content: "";
+    position: absolute;
+    top: 44%;
+    left: rem(4);
+    transform: translateY(-50%) rotate(49deg);
+    width: rem(5);
+    height: rem(9);
+    border: solid #c94800;
+    border-width: 0 rem(2) rem(2) 0;
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + span::after {
+    opacity: 1;
+}
+
+.form__input-text::placeholder,
+.form__textarea::placeholder {
+    color: $blue;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    height: auto;
+    font-size: rem(16);
+    font-weight: $regular;
+    border: 1px solid $green;
+    padding: rem(8) rem(16);
+}
+
+.form__select-wrap {
+    position: relative;
+}
+
+.form__select-wrap::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(8);
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: rem(5) solid transparent;
+    border-left: rem(5) solid transparent;
+    border-top: rem(9) solid #408f95;
+    border-bottom: 0;
+    pointer-events: none;
+}
+select {
+    width: 100%;
+    height: auto;
+    font-size: rem(12);
+    font-weight: $regular;
+    color: $green2;
+    border: 1px solid $green;
+    padding: rem(8);
+}
+
+.form__textarea {
+    height: rem(200);
+    resize: vertical;
+}
+
+
+.form__checkbox-wrap--big span {
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(22 / 14);
+    color: $green2;
+    position: relative;
+}
+
+.form__checkbox-wrap--big span {
+    padding-left: rem(30);
+}
+
+.form__checkbox-wrap--big span::before {
+    width: rem(22);
+    height: rem(22);
+    top: 0;
+    transform: translateY(0);
+}
+
+.form__checkbox-wrap--big span::after {
+    top: 10%;
+    left: rem(8);
+    transform: translateY(0) rotate(43deg);
+    width: rem(8);
+    height: rem(14);
+    border-width: 0 rem(2) rem(2) 0;
+}
+
+.form__item--center {
+    border-bottom: none;
+    margin-top: rem(40);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.form__button {
+    text-align: center;
+}
+
+.form__error {
+    margin-top: rem(52);
+    display: flex;
+    justify-content: center;
+    text-indent: rem(-14);
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+}
+
+.form__list--error {
+    margin-top: rem(40);
+}
+
+.form__input--error {
+    background-color: rgba(201, 72, 0, 0.2);
+}
+
+.form__input-text--error::placeholder {
+    color: $white;
+}
+
+input.form__input-text--error{
+    border: 1px solid #c94800;
+}

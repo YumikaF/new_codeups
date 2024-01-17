@@ -29,6 +29,7 @@
     height: inherit;
     max-width: rem(102);
     width: 100%;
+    z-index: 1001;
     @include mq("md") {
         max-width: rem(133);
     }

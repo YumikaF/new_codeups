@@ -1,0 +1,7 @@
+@use "global" as *;
+.price-mv {
+    background-image: url(../images/common/price-mv-sp-img.jpg);
+    @include mq("md") {
+        background-image: url(../images/common/price-mv-pc-img.jpg);
+    }
+}

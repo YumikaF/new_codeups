@@ -1,0 +1,29 @@
+@use "global" as *;
+.aside-heading {
+    font-size: rem(24);
+    font-weight: $regular;
+    color: $green2;
+    padding-top: rem(9);
+    padding-bottom: rem(6);
+    padding-left: rem(74);
+    border-left: rem(8) solid $green;
+}
+
+.aside-heading span {
+    position: relative;
+}
+
+.aside-heading span::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: rem(50);
+    height: rem(50);
+    top: 50%;
+    left: rem(-58);
+    transform: translateY(-50%);
+    background-image: url(../images/common/blog-heading-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
