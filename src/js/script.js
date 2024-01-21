@@ -2,24 +2,26 @@ jQuery(function ($) {
     // この中であればWordpressでも「$」が使用可能になる
 });
 
+
+
 $(function () {
-    // ハンバーガーメニューのアイコンがクリックされたときのイベントハンドラー
     $(".js-hamburger").click(function () {
-        // ハンバーガーメニューのアイコンの状態を切り替える
         $(this).toggleClass("is-active");
-        // ナビゲーションメニューの表示・非表示を切り替える
         $(".js-sp-nav").fadeToggle();
 
-        // 現在のbodyタグのoverflowスタイルを確認
+        // ヘッダーの背景色を切り替える
+        $(".js-header").toggleClass("header--green");
+
         if ($("body").css("overflow") === "hidden") {
-            // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
             $("body").css({ height: "", overflow: "" });
         } else {
-            // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
             $("body").css({ height: "100%", overflow: "hidden" });
         }
     });
 });
+
+
+
 
 // メインビジュアルのスライダー
 const mvSwiper = new Swiper(".js-mv-swiper", {
@@ -43,7 +45,6 @@ const campaignSwiper = new Swiper(".js-campaign-swiper", {
         768: {
             spaceBetween: 40,
         }
-        
     },
     navigation: {
         nextEl: ".js-campaign-button-next",

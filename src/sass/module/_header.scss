@@ -12,6 +12,14 @@
     }
 }
 
+.header--green {
+    background-color: $green;
+    z-index: 1000;
+    
+}
+
+
+
 .header__inner {
     height: inherit;
     display: flex;
@@ -57,3 +65,4 @@
         display: block;
     }
 }
+
