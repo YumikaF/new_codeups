@@ -84,7 +84,7 @@
     }
 }
 
-.voice-card__animation {
+.voice-card__img {
     margin-left: rem(13);
     @include mq("md") {
 margin-left: rem(16);
@@ -92,13 +92,13 @@ margin-left: rem(16);
   
 }
 
-.voice-card__img {
+.voice-card__img img{
     object-fit: cover;
     aspect-ratio: 151 /117;
-    // margin-left: rem(13);
+    width: 100%;
+    height: 100%;
     @include mq("md") {
         aspect-ratio: 180 / 140;
-        // margin-left: rem(16);
     }
 }
 

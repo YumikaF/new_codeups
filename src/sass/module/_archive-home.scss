@@ -1,7 +1,6 @@
 @use "global" as *;
-.archive-home {
 
-}
+.archive-home {}
 
 .archive-home__inner {
     max-width: rem(630);
@@ -19,28 +18,26 @@
 }
 
 .archive-home__inner::before {
-  
-        position: absolute;
-        content: "";
-        width: rem(120);
-        height: rem(55);
-        
-        left: calc(50% - min(44.5vw, 39rem));
-        top: rem(-24);
-        
-        background-image: url("../images/common/voice-bg.png");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: -1;
-        @include mq("md") {
-            width: rem(301);
-            height: rem(138);
-            top: rem(-70);
-            left: calc(50% - min(48.5vw, 39rem));
-          
-        }
+    position: absolute;
+    content: "";
+    width: rem(120);
+    height: rem(55);
+    left: calc(50% - min(44.5vw, 39rem));
+    top: rem(-24);
+    background-image: url("../images/common/voice-bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+        left: calc(50% - min(48.5vw, 39rem));
+
     }
+}
 
 
 .archive-home__body:nth-child(1) {
@@ -48,25 +45,11 @@
         width: 64.8%;
     }
 }
+
 .archive-home__body:nth-child(2) {
     @include mq("md") {
 
         width: 100%;
         max-width: rem(294);
     }
-}
-
-
-.archive-home__cards {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: rem(40);
-    @include mq("md") {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: rem(40);
-        row-gap: rem(80);
-    }
-}
-
-.archive-home__card {
 }

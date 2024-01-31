@@ -38,20 +38,18 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header js-header">
     <div class="header__inner">
       <h1 class="header__logo">
         <a class="header__logo-link" href="#">
           <img class="header__logo-img" src="./assets/images/common/logo-codeups.svg" alt="ヘッダーロゴ">
         </a>
       </h1>
-
       <button class="header__drawer hamburger js-hamburger" aria-label="メニューを開閉する">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
       <nav class="header__pc-nav pc-nav">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
@@ -123,32 +121,29 @@
     </div>
     <!-- ドロワーメニュー -->
     <div class="header__sp-nav sp-nav js-sp-nav">
-      <div class="sp-nav__header">
-        <div class="sp-nav__logo">
-          <a class="sp-nav__logo-link" href="#"></a>
-          <img class="sp-nav__logo-img" src="./assets/images/common/logo-codeups.svg" alt="ヘッダーロゴ">
-        </div>
-      </div>
       <nav class="sp-nav__wrap ">
         <div class="sp-nav__list ">
           <ul class="sp-nav__items">
-            <li class="sp-nav__item"><a class="sp-nav__item-link sp-nav__item--bold" href="#campaign">キャンペーン</a></li>
+            <li class="sp-nav__item"><a class="sp-nav__item-link sp-nav__item-link--bold" href="#campaign">キャンペーン</a>
+            </li>
             <li class="sp-nav__item"><a class="sp-nav__item-link" href="#">ライセンス取得</a></li>
             <li class="sp-nav__item"><a class="sp-nav__item-link" href="#">貸切体験ダイビング</a></li>
             <li class="sp-nav__item"><a class="sp-nav__item-link" href="#">ナイトダイビング</a></li>
           </ul>
           <ul class="sp-nav__items">
-            <li class="sp-nav__item"><a class="sp-nav__item-link sp-nav__item--bold" href="#about-us">私たちについて</a></li>
+            <li class="sp-nav__item"><a class="sp-nav__item-link sp-nav__item-link--bold" href="#about-us">私たちについて</a>
+            </li>
           </ul>
           <ul class="sp-nav__items">
-            <li class="sp-nav__item"><a class="sp-nav__item-link sp-nav__item--bold" href="#information">ダイビング情報</a>
+            <li class="sp-nav__item"><a class="sp-nav__item-link sp-nav__item-link--bold"
+                href="#information">ダイビング情報</a>
             </li>
             <li class="sp-nav__item"><a class="sp-nav__item-link" href="">ライセンス講習</a></li>
             <li class="sp-nav__item"><a class="sp-nav__item-link" href="">体験ダイビング</a></li>
             <li class="sp-nav__item"><a class="sp-nav__item-link" href="">ファンダイビング</a></li>
           </ul>
           <ul class="sp-nav__items">
-            <li class="sp-nav__item"><a class="sp-nav__item-link sp-nav__item--bold" href="#blog">ブログ</a></li>
+            <li class="sp-nav__item"><a class="sp-nav__item-link sp-nav__item-link--bold" href="#blog">ブログ</a></li>
           </ul>
         </div>
         <div class="sp-nav__list">
@@ -196,7 +191,7 @@
       </div>
     </div>
     <!-- ダイビング情報 -->
-    <section class="page-information">
+    <section class="page-information layout-information">
       <div class="page-information__inner inner">
         <div class="page-information__tab information-tab">
           <div class="information-tab__list">
@@ -220,7 +215,7 @@
               </div>
               <div class="information-card__img-wrap information-card__img-wrap--page">
                 <img class="information-card__img information-card__img--page"
-                  src="./assets/images/common/page-information-img1.jpg" alt="ダミー画像" class="tab__img">
+                  src="./assets/images/common/page-information-img1.jpg" alt="ダイバーがライセンス講習を受けている様子" class="tab__img">
               </div>
             </div>
           </div>
@@ -234,7 +229,7 @@
               </div>
               <div class="information-card__img-wrap information-card__img-wrap--page">
                 <img class="information-card__img information-card__img--page"
-                  src="./assets/images/common/page-information-img2.jpg" alt="ダミー画像" class="tab__img">
+                  src="./assets/images/common/page-information-img2.jpg" alt="綺麗な青い海を泳ぐ魚の群れ" class="tab__img">
               </div>
             </div>
           </div>
@@ -248,7 +243,7 @@
               </div>
               <div class="information-card__img-wrap information-card__img-wrap--page">
                 <img class="information-card__img information-card__img--page"
-                  src="./assets/images/common/page-information-img3.jpg" alt="ダミー画像" class="tab__img">
+                  src="./assets/images/common/page-information-img3.jpg" alt="透き通った綺麗な海を泳ぐ２匹の魚" class="tab__img">
               </div>
             </div>
           </div>
@@ -256,11 +251,11 @@
       </div>
     </section>
     <!-- コンタクト -->
-    <section class="contact" id="contact">
+    <section class="top-contact contact">
       <div class="contact__inner inner">
         <div class="contact__wrapper">
           <div class="contact__info contact-info">
-            <div class="contact__info-header">
+            <div class="contact-info__header">
               <img class="contact-info__header-logo" src='./assets/images/common/contact-logo.svg' alt='ロゴ画像'
                 loading='lazy'>
             </div>
@@ -280,13 +275,13 @@
             </div>
           </div>
           <div class="contact__contents contact-box">
-            <div class="contact-box__header">
-              <p class="contact-box__header-title"><span>c</span>ontact</p>
-              <h2 class="contact-box__header-subtitle">お問合せ</h2>
-              <p class="contact-box__contents-text">ご予約・お問い合わせはコチラ</p>
+            <div class="contact-box__header section-header">
+              <p class="section-header__title section-header__title--large">contact</p>
+              <h2 class="section-header__subtitle">お問い合わせ</h2>
             </div>
+            <p class="contact-box__contents-text">ご予約・お問い合わせはコチラ</p>
             <div class="contact-box__button">
-              <a class=" contact-box__button-link button" href="#"><span>Contact&nbsp;us</span>
+              <a class="button" href="#"><span>Contact&nbsp;us</span>
               </a>
             </div>
           </div>
@@ -294,7 +289,9 @@
       </div>
     </section>
     <!-- ページトップへ戻るボタン -->
-    <div class="page-top-button js-page-top"></div>
+    <div class="page-top-button js-page-top">
+      <a href="#top"></a>
+    </div>
   </main>
   <footer>
     <div class="footer top-footer">
@@ -401,7 +398,7 @@
           </div>
         </nav>
 
-        <div  class="footer__copyright">
+        <div class="footer__copyright">
           <small>
             Copyright&nbsp;&copy;&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.
           </small>

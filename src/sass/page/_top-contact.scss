@@ -1,5 +1,5 @@
 @use "global" as *;
-.contact {
+.top-contact {
     margin-top: rem(80);
 
     @include mq("md") {

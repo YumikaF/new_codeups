@@ -10,8 +10,7 @@
 
 .information-tab__button {
     z-index: 10;
-    // width: rem(102);
-    padding: rem(10) ;
+    padding: rem(10) rem(16);
     cursor: pointer;
     font-size: rem(14);
     font-weight: $regular;

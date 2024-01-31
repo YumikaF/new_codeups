@@ -1,11 +1,6 @@
 @use "global" as *;
 .page-about-us {
-margin-top: rem(52);
-width: 100%;
-height: auto;
-@include mq("md") {
-    margin-top: rem(150);
-}
+
 }
 
 .page-about-us__inner {
@@ -34,7 +29,6 @@ height: auto;
 
 .page-about-us__inner::after {
     @include mq("md") {
-
         position: absolute;
         content: "";
         width: rem(301);
@@ -54,7 +48,6 @@ height: auto;
 .page-about-us__contents {
     @include mq("md") {
         position: relative;
-margin-top: rem(24);
     }
 }
 

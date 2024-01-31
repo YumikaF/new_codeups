@@ -1,6 +1,5 @@
 @use "global" as *;
-
-.layout-single-body {
+.layout-page {
     margin-top: rem(52);
     @include mq("md") {
         margin-top: rem(150);
