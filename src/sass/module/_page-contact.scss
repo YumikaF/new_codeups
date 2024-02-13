@@ -1,20 +1,11 @@
 @use "global" as *;
-.page-contact {
-    margin-top: rem(52);
-    padding-bottom: rem(144);
-    @include mq("md") {
-        margin-top: rem(150);
-        padding-bottom: rem(160);
-    }
-}
 
-.page-contact {
+.page-contact {}
 
-}
 
 .page-contact__inner {
-position: relative;
-   
+    position: relative;
+
 }
 
 .page-contact__inner::before {
@@ -29,6 +20,7 @@ position: relative;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
+
     @include mq("md") {
         width: rem(301);
         height: rem(138);
@@ -42,13 +34,11 @@ position: relative;
 .page-contact__contents {
     margin-inline: auto;
     max-width: rem(600);
+
     @include mq("md") {
 
         max-width: rem(700);
     }
 }
 
-.page-contact__form {
-
-}
-
+.page-contact__form {}

@@ -1,20 +1,19 @@
 @use "global" as *;
+
 .archive-campaign-cards {
-    display: grid;
-    grid-template-columns:  1fr;
-    row-gap: rem(40);
-    justify-items: center;
-    align-items: stretch;
-  
-    @include mq("md") {
-      
-      grid-template-columns: repeat(2, minmax(rem(280), 1fr));
-      column-gap: rem(40);
-      row-gap: rem(80);
-  
-    }
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: rem(40);
+  justify-items: center;
+  align-items: stretch;
+
+  @include mq("md") {
+
+    grid-template-columns: repeat(2, minmax(rem(280), 1fr));
+    column-gap: rem(40);
+    row-gap: rem(80);
+
+  }
 }
 
-.archive-campaign-cards__item {
-    
-}
+.archive-campaign-cards__item {}

@@ -4,13 +4,13 @@
     padding-top: rem(80);
     padding-bottom: rem(82);
     background-color: $blue;
+
     @include mq("md") {
-      position: relative;
+        position: relative;
     }
 }
 
-.price__inner {
-}
+.price__inner {}
 
 .price__inner::before {
     @include mq("md") {
@@ -34,8 +34,7 @@
     }
 }
 
-.price__header-title {
-}
+.price__header-title {}
 
 .price__header-subtitle {
     @include mq("md") {
@@ -45,6 +44,7 @@
 
 .price__body {
     margin-top: rem(24);
+
     @include mq("md") {
         margin-top: rem(36);
         display: flex;
@@ -57,6 +57,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+
     @include mq("md") {
         max-width: 492px;
         width: 100%;
@@ -75,17 +76,19 @@
 
 .price__contents {
     margin-top: rem(40);
+
     @include mq("md") {
         margin-top: 0;
         width: 100%;
-    max-width: 496px;
+        max-width: 496px;
     }
 }
 
 .price__table {
     margin-top: rem(40);
+
     @include mq("md") {
-margin-top: 0;
+        margin-top: 0;
     }
 }
 
@@ -99,9 +102,8 @@ margin-top: 0;
 .price__button {
     text-align: center;
     margin-top: rem(36);
+
     @include mq("md") {
         margin-top: rem(80);
     }
 }
-
-

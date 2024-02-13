@@ -1,4 +1,5 @@
 @use "global" as *;
+
 .form-button__wrap input[type="submit"] {
     font-size: rem(14);
     color: $white;
@@ -18,14 +19,15 @@
     background-color: $green;
     padding-top: rem(16);
     padding-bottom: rem(16);
-    padding-left: rem(39);
-    padding-right: rem(88);
+    padding-left: rem(56);
+    padding-right: rem(96);
     cursor: pointer;
     border: rem(1) solid $green;
     width: rem(202);
     transition: 0.2s background-color;
     z-index: 0;
     text-align: center;
+    line-height: 1;
 }
 
 .form-button__submit {
@@ -33,6 +35,7 @@
     padding-right: rem(48);
     position: relative;
 }
+
 .form-button__submit::after {
     content: "";
     position: absolute;

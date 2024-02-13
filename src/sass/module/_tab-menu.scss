@@ -1,7 +1,6 @@
 @use "global" as *;
-.tab-menu {
-    
-}
+
+.tab-menu {}
 
 
 
@@ -12,9 +11,13 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: rem(21);
     row-gap: rem(16);
+    align-items: center;
+    justify-content: center;
+
     @include mq("md") {
         grid-template-columns: repeat(4, rem(162));
         column-gap: rem(32);
+        justify-content: left;
     }
 }
 
@@ -22,36 +25,35 @@
 
 
 .tab-menu__item {
-  
-}
-
-.tab-menu__item-link{
-    display: inline-block;
-text-align: center;
-font-size: rem(14);
-font-weight: $regular;
-line-height: calc(22 / 14);
-padding: rem(6) rem(20);
-color: $green;
-border: rem(1) solid $green;
-background-color: $white;
-max-width:rem(162);
-width: 100%;
-white-space: nowrap;
-@include mq("md") {
+    text-align: center;
 
 }
-}
+
 .tab-menu__item-link {
-  
+    display: inline-block;
+    text-align: center;
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(22 / 14);
+    padding: rem(6) rem(20);
+    color: $green;
+    border: rem(1) solid $green;
+    background-color: $white;
+    max-width: rem(162);
+    width: 100%;
+    white-space: nowrap;
+
+    @include mq("md") {}
 }
+
+.tab-menu__item-link {}
 
 
 .tab-menu__item-link--green {
     display: inline-block;
     text-transform: uppercase;
-color: $white;
-background-color: $green;
+    color: $white;
+    background-color: $green;
 
 
 

@@ -1,4 +1,5 @@
 @use "global" as *;
+
 .sp-nav {
     display: none;
     width: 100%;
@@ -20,15 +21,15 @@
     padding-left: rem(24);
 }
 
-.sp-nav__list + .sp-nav__list {
+.sp-nav__list+.sp-nav__list {
     margin-left: rem(29);
 }
 
-.sp-nav__items + .sp-nav__items {
+.sp-nav__items+.sp-nav__items {
     margin-top: rem(32);
 }
 
-.sp-nav__item + .sp-nav__item {
+.sp-nav__item+.sp-nav__item {
     margin-top: rem(19);
 }
 

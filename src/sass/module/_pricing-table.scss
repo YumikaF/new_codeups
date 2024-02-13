@@ -1,7 +1,10 @@
 @use "global" as *;
+
 .pricing-table {
-    width: 100%; /* テーブルの幅を設定 */
+    width: 100%;
+    /* テーブルの幅を設定 */
     border-collapse: collapse;
+
     @include mq("md") {
         max-width: rem(700);
         display: flex;
@@ -11,13 +14,14 @@
     }
 }
 
-.pricing-table + .pricing-table {
+.pricing-table+.pricing-table {
     margin-top: rem(40);
+
     @include mq("md") {
-  margin-top: rem(80);
+        margin-top: rem(80);
     }
-  
-  }
+
+}
 
 .pricing-table__header {
     flex-basis: auto;
@@ -32,17 +36,21 @@
 }
 
 .pricing-table__header th {
-    border: rem(1) solid $green; /* ヘッダーのセルのボーダー */
+    border: rem(1) solid $green;
+    /* ヘッダーのセルのボーダー */
 }
 
 .pricing-table__course,
 .pricing-table__price {
-    border: rem(1) solid $green; /* コース名と価格のセルのボーダー */
+    border: rem(1) solid $green;
+    /* コース名と価格のセルのボーダー */
 }
 
 .pricing-table__course {
-    padding: rem(7) rem(20); /* セルのパディング */
+    padding: rem(7) rem(20);
+    /* セルのパディング */
     text-align: center;
+
     @include mq("md") {
         text-align: left;
         width: 100%;
@@ -53,6 +61,7 @@
 .pricing-table__price {
     padding: rem(19) rem(16) rem(19) rem(20);
     text-align: center;
+
     @include mq("md") {
         text-align: right;
         padding: rem(18) rem(16) rem(18) rem(57);
@@ -67,12 +76,15 @@
     font-weight: $bold;
     line-height: calc(24 / 16);
     color: $white;
+    white-space: nowrap;
+
     @include mq("md") {
+        display: table;
         padding: 0;
         position: absolute;
         content: "";
         width: rem(112);
-        top: 30%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -81,6 +93,7 @@
 .pricing-table__header-text span {
     position: relative;
     padding-left: rem(32);
+
     @include mq("md") {
         padding-left: 0;
     }
@@ -89,7 +102,6 @@
 .pricing-table__header-text span::before {
     position: absolute;
     content: "";
-
     display: inline-block;
     width: rem(24);
     height: rem(24);
@@ -100,6 +112,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
     @include mq("md") {
         width: rem(64);
         height: rem(64);
@@ -109,11 +122,24 @@
         transform: translateX(-50%);
     }
 }
+.pricing-table__header-text--second span::before{
+    background-image: url(../images/common/page-information-icon3-white.png);
+
+
+}
+.pricing-table__header-text--third span::before{
+    background-image: url(../images/common/page-information-icon2-white.png);
+
+
+}
+
 
 .pricing-table__content {
     flex-basis: auto;
+
     @include mq("md") {
-        width: calc(100% - 28.57%); /* コンテンツ部分の基本の幅 */
+        width: calc(100% - 28.57%);
+        /* コンテンツ部分の基本の幅 */
     }
 }
 
@@ -144,6 +170,7 @@
 
 .sp-show {
     display: block;
+
     @include mq("md") {
         display: none;
     }

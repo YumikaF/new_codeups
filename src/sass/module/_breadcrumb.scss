@@ -1,11 +1,10 @@
 @use "global" as *;
+
 .breadcrumb {
   margin-top: rem(8);
 }
 
-.breadcrumb__inner {
-
-}
+.breadcrumb__inner {}
 
 .breadcrumb__text {
   color: $white;

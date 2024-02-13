@@ -1,4 +1,5 @@
 @use "global" as *;
+
 .information {
     background-color: $blue;
     padding-top: rem(80);
@@ -15,8 +16,7 @@
     max-width: rem(600);
 }
 
-.information__header {
-}
+.information__header {}
 
 
 
@@ -24,10 +24,9 @@
 
 .information__contents {
     margin-top: rem(24);
+
     @include mq("md") {
         margin-top: rem(35);
         display: flex;
     }
 }
-
-

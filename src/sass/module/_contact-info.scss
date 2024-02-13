@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.contact-info {
-}
+.contact-info {}
 
 .contact-info__header {
     border-bottom: rem(1) solid $green;
     padding-bottom: rem(5);
+
     @include mq("md") {
         padding-bottom: rem(8);
     }
@@ -15,6 +15,7 @@
     aspect-ratio: 174 / 65;
     width: rem(174);
     margin-inline: auto;
+
     @include mq("md") {
         aspect-ratio: 200 / 75;
         width: rem(200);
@@ -52,12 +53,13 @@
 .contact-info__list-item:not(:first-child) {
     margin-top: rem(4);
 
-    }
+}
 
 
 .contact-info__map {
     margin-top: rem(16);
-  text-align: center;
+    text-align: center;
+
     @include mq("md") {
         margin-left: rem(24);
         width: 100%;
@@ -70,6 +72,7 @@
     object-fit: cover;
     max-width: 295px;
     width: 100%;
+
     @include mq("md") {
         aspect-ratio: 273/ 148;
         margin-inline: 0;

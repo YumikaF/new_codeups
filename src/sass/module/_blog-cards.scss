@@ -1,13 +1,14 @@
 @use "global" as *;
+
 .blog-cards {
     display: grid;
     column-gap: rem(40);
     grid-template-columns: 1fr;
     row-gap: rem(40);
+
     @include mq("md") {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-.blog-cards__list {
-}
+.blog-cards__list {}

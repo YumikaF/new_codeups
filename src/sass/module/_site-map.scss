@@ -2,14 +2,15 @@
 
 .site-map {
     margin-top: rem(52);
+
     @include mq("md") {
         margin-top: rem(150);
     }
 }
 
 .site-map__inner {
-position: relative;
-max-width: rem(375);
+    position: relative;
+    max-width: rem(375);
 }
 
 .site-map__inner::before {
@@ -25,7 +26,8 @@ max-width: rem(375);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
+
     @include mq("md") {
-       display: none;
-}
+        display: none;
+    }
 }

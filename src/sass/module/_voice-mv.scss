@@ -1,6 +1,8 @@
 @use "global" as *;
+
 .voice-mv {
     background-image: url(../images/common/voice-mv-sp-img.jpg);
+
     @include mq("md") {
         background-image: url(../images/common/voice-mv-pc-img.jpg);
 

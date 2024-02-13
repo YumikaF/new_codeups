@@ -1,12 +1,11 @@
 @use "global" as *;
+
 .campaign-mv {
     background-image: url(../images/common/campaign-sp-mv.jpg);
+
     @include mq("md") {
-        
+
         background-image: url(../images/common/campaign-pc-mv.jpg);
-}
+    }
 
 }
-
-
-

@@ -195,3 +195,12 @@ $(function () {
         tabContent.eq(index).addClass("is-active");
     });
 });
+
+$(document).ready(function() {
+    // 404ページかどうかを判断するロジック
+    // 例えばURLを確認する場合
+    if (window.location.href.includes('/page-404.html')) {
+        $('body').css('background-color', '#408F95');
+    }
+});
+

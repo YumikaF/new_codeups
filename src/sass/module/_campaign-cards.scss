@@ -3,10 +3,8 @@
 .campaign-cards {
     display: grid;
     grid-auto-flow: column;
-    
-    @include mq("md") {
-    }
+
+    @include mq("md") {}
 }
 
-.campaign-cards__item {
-}
+.campaign-cards__item {}

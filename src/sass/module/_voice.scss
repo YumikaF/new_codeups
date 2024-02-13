@@ -1,10 +1,10 @@
 @use "global" as *;
-.voice {
-   
-}
+
+.voice {}
 
 .voice__inner {
     max-width: rem(630);
+
     @include mq("md") {
         position: relative;
         // padding-bottom: rem(76);
@@ -44,11 +44,9 @@
     }
 }
 
-.voice__header {
-}
+.voice__header {}
 
-.voice__header-title {
-}
+.voice__header-title {}
 
 .voice__header-subtitle {
     @include mq("md") {
@@ -70,8 +68,8 @@
 .voice__button {
     margin-top: rem(39);
     text-align: center;
+
     @include mq("md") {
         margin-top: rem(78);
     }
 }
-

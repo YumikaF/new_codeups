@@ -1,4 +1,5 @@
 @use "global" as *;
+
 .page-top-button {
     position: fixed;
     z-index: 50;
@@ -11,6 +12,7 @@
     border-radius: 50%;
     border: rem(1) solid $green;
     display: none;
+
     @include mq("md") {
         width: rem(80);
         height: rem(80);
@@ -36,6 +38,7 @@
     background-size: contain;
 
     transform: rotate(-90deg) translate(-50%, -50%);
+
     @include mq("md") {
         width: rem(40);
         height: rem(40);

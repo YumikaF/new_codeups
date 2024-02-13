@@ -1,13 +1,15 @@
 @use "global" as *;
+
 .aside {
-margin-top: rem(80);
-@include mq("md") {
-margin-top: 0;
-}
+    margin-top: rem(80);
+
+    @include mq("md") {
+        margin-top: 0;
+    }
 }
 
-.aside + .aside {
-margin-top: rem(80);
+.aside+.aside {
+    margin-top: rem(80);
 }
 
 .aside__inner {
@@ -16,29 +18,26 @@ margin-top: rem(80);
     margin-right: auto;
     width: 100%;
     max-width: rem(600);
-    @include mq("md") { 
+
+    @include mq("md") {
         padding-left: 0;
         padding-right: 0;
-        
-     }
+
+    }
 }
 
-.aside__heading {
-
-}
+.aside__heading {}
 
 
 
-.aside__contents{
+.aside__contents {
     margin-top: rem(24);
 
 }
 
-.aside__content {
+.aside__content {}
 
-}
-
-.aside__content + .aside__content {
+.aside__content+.aside__content {
     margin-top: rem(24);
 }
 
@@ -47,6 +46,6 @@ margin-top: rem(80);
     margin-top: rem(40);
 }
 
-.aside__card + .aside__card {
+.aside__card+.aside__card {
     margin-top: rem(40);
 }

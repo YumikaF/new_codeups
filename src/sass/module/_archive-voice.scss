@@ -1,9 +1,9 @@
 @use "global" as *;
-.archive-voice {
-}
+
+.archive-voice {}
 
 .archive-voice__inner {
-position: relative;
+    position: relative;
 }
 
 .archive-voice__inner::before {
@@ -28,13 +28,8 @@ position: relative;
     }
 }
 
-.archive-voice__tab-menu {
-
-}
+.archive-voice__tab-menu {}
 
 .archive-voice__cards {
-margin-top: rem(40);
+    margin-top: rem(40);
 }
-
-
-

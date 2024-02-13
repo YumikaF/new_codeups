@@ -1,13 +1,15 @@
 @use "global" as *;
+
 .faq-container {
   width: 100%;
   max-width: rem(600);
+
   @include mq("md") {
-max-width: rem(700);
+    max-width: rem(700);
   }
 }
 
-.faq-container__item + .faq-container__item {
+.faq-container__item+.faq-container__item {
   margin-top: rem(40);
 
 }

@@ -1,38 +1,34 @@
 @use "global" as *;
-.campaign {
-   
-}
+
+.campaign {}
 
 .campaign__inner {
-position: relative;
+    position: relative;
 }
 
-.campaign__header {
-}
+.campaign__header {}
 
 
 
 
 
 .campaign__contents {
-margin-right: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 
 }
 
-.campaign__swiper-button {
-
-}
+.campaign__swiper-button {}
 
 .campaign__swiper-button-prev,
 .campaign__swiper-button-next {
-            height: 80px;
-            width: 80px;
-            top: 0;
-            transition: opacity 0.3s;
+    height: 80px;
+    width: 80px;
+    top: 0;
+    transition: opacity 0.3s;
 
 }
 
-.swiper-button-next:after{
+.swiper-button-next:after {
     background-image: url('../images/common/next-arrow.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -40,7 +36,7 @@ margin-right: calc(50% - 50vw);
     height: rem(80);
     width: rem(80);
     display: none;
-    
+
     @include mq("md") {
         display: block;
     }
@@ -56,15 +52,17 @@ margin-right: calc(50% - 50vw);
     display: none;
 
     @include mq("md") {
-    display: block;
+        display: block;
     }
 }
 
-.campaign__swiper-button-prev, .swiper-rtl .swiper-button-next {
+.campaign__swiper-button-prev,
+.swiper-rtl .swiper-button-next {
     left: 76.5%;
-} 
+}
 
-.campaign__swiper-button-next, .swiper-rtl .swiper-button-prev  {
+.campaign__swiper-button-next,
+.swiper-rtl .swiper-button-prev {
     right: 3%;
 }
 
@@ -88,17 +86,14 @@ margin-right: calc(50% - 50vw);
     }
 }
 
-.campaign__slider-cards {
-
-}
+.campaign__slider-cards {}
 
 
 .campaign__button {
     text-align: center;
     margin-top: rem(28);
+
     @include mq("md") {
         margin-top: rem(68);
     }
 }
-
-

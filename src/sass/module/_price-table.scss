@@ -1,12 +1,10 @@
 @use "global" as *;
 
-.price-table {
-}
+.price-table {}
 
-.price-table__lists {
-}
+.price-table__lists {}
 
-.price-table__lists-item + .price-table__lists-item {
+.price-table__lists-item+.price-table__lists-item {
     margin-top: rem(40);
 }
 
@@ -33,6 +31,7 @@
     line-height: calc(24 / 14);
     color: $green2;
     margin-top: rem(9);
+
     @include mq("md") {
         font-size: rem(16);
         font-weight: $regular;

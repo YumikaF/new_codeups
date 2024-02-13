@@ -1,11 +1,10 @@
 @use "global" as *;
 
-.about-us {
-   
-}
+.about-us {}
 
 .about-us__inner {
     max-width: rem(600);
+
     @include mq("md") {
         position: relative;
     }
@@ -28,8 +27,7 @@
 
 }
 
-.about-us__header {
-}
+.about-us__header {}
 
 
 
@@ -37,6 +35,7 @@
 .about-us__contents {
     margin-top: rem(22);
     position: relative;
+
     @include mq("md") {
         margin-top: rem(24);
     }
@@ -54,6 +53,7 @@
     object-fit: cover;
     z-index: 2;
     position: relative;
+
     @include mq("md") {
         aspect-ratio: 400 / 606;
         width: calc(400 / 1080 * 100%);
@@ -67,6 +67,7 @@
     object-fit: cover;
     margin-top: -49%;
     margin-left: auto;
+
     @include mq("md") {
         aspect-ratio: 880 / 581;
         width: calc(880 / 1080 * 100%);
@@ -75,6 +76,7 @@
 
 .about-us__img-bottom {
     display: none;
+
     @include mq("md") {
         aspect-ratio: 194 / 181;
         width: calc(194 / 1080 * 100%);
@@ -88,6 +90,7 @@
 
 .about-us__title-wrap {
     margin-top: rem(40);
+
     @include mq("md") {
         position: absolute;
         top: 50%;
@@ -99,12 +102,14 @@
         width: 100%;
     }
 }
+
 .about-us__title {
     font-size: rem(40);
     font-weight: $regular;
     font-family: $en-font;
     line-height: calc(40 / 40);
     color: $green;
+
     @include mq("md") {
         font-size: rem(80);
         line-height: calc(100 / 80);
@@ -126,6 +131,7 @@
     line-height: calc(24 / 16);
     color: $green2;
     margin-top: rem(16);
+
     @include mq("md") {
         color: $white;
         margin-top: 0;
@@ -136,9 +142,8 @@
     text-align: center;
 
     margin-top: rem(48);
+
     @include mq("md") {
         margin-top: rem(38);
     }
 }
-
-

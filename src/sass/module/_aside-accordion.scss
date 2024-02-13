@@ -1,57 +1,44 @@
 @use "global" as *;
-.archive-aside__accordion {
-
-}
-
-.aside-accordion {
-
-}
 
 
-
-.aside-accordion__lists {
-
-}
-
+// .aside-accordion__lists-title {
+//     cursor: pointer;
+// }
 
 
-.aside-accordion__lists-title {
-cursor: pointer;
-}
+// .aside-accordion__list {
+//     display: none;
 
+// }
 
-.aside-accordion__list {
-    display: none;
-
-}
-.aside-accordion__list:not(:first-child) {
+.aside-archive__content:not(:first-child) {
     text-indent: 3ch;
 }
 
 
 
-.aside-accordion__item {
+.aside-accordion__item {}
 
-}
-
-.aside-accordion__lists-title,
-.aside-accordion__list-link {
+.aside-archive__toggle,
+.aside-archive__content a {
     font-size: rem(24);
     font-weight: $regular;
     color: $green;
 }
 
-.aside-accordion__lists-title span {
+.aside-archive__toggle span,
+.aside-archive__content a{
     padding-left: rem(30);
     position: relative;
 }
 
-.aside-accordion__list-link span {
-    padding-left: rem(30);
-    position: relative;
-}
+// .aside-accordion__list-link span {
+//     padding-left: rem(30);
+//     position: relative;
+// }
 
-.aside-accordion__lists-title span::before {
+
+.aside-archive__toggle span::before{
     position: absolute;
     content: "";
     top: 58%;
@@ -66,7 +53,7 @@ cursor: pointer;
     border-bottom: 0;
 }
 
-.aside-accordion__list span::before {
+.aside-archive__content a::before{
     position: absolute;
     content: "";
     top: 58%;
@@ -79,6 +66,4 @@ cursor: pointer;
     border-bottom: rem(11) solid transparent;
     border-left: rem(18) solid $green;
     border-right: 0;
-  }
-
-
+}

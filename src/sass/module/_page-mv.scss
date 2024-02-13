@@ -1,4 +1,5 @@
 @use "global" as *;
+
 .page-mv {
 
     width: 100%;
@@ -7,11 +8,11 @@
     background-size: cover;
     background-position: center;
     aspect-ratio: 375 / 460;
-    
-    
+
+
     @include mq("md") {
-    height: rem(548);
-}
+        height: rem(548);
+    }
 
 }
 
@@ -29,10 +30,12 @@
     font-weight: $regular;
     font-family: $number-font;
     color: $white;
+
     @include mq("md") {
-font-size: rem(80);
+        font-size: rem(80);
     }
 }
+
 .page-mv__title:first-letter {
 
     text-transform: uppercase;

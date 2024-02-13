@@ -1,14 +1,14 @@
 @use "global" as *;
-.form {
-}
 
-.form__list {
-}
+.form {}
+
+.form__list {}
 
 .form__item {
     padding-bottom: rem(24);
     // 点線の下線を引く
     border-bottom: 1px dotted $green;
+
     @include mq("md") {
         padding-bottom: rem(40);
     }
@@ -23,6 +23,7 @@
 
 .form__item:not(:first-child):not(:last-child) {
     margin-top: rem(24);
+
     @include mq("md") {
         margin-top: rem(40);
     }
@@ -94,6 +95,19 @@
     border: rem(1) solid $green;
 }
 
+.form__checkbox-wrap--square span::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: rem(14);
+    height: rem(14);
+    border: rem(1) solid $green;
+    border-radius: 50%;
+
+
+}
+
 .form__checkbox-wrap span::after {
     content: "";
     position: absolute;
@@ -107,7 +121,20 @@
     opacity: 0;
 }
 
-input[type="checkbox"]:checked + span::after {
+.form__checkbox-wrap--square span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: rem(2.5);
+    transform: translateY(-50%);
+    width: rem(8);
+    height: rem(8);
+    border: rem(1) solid $green;
+    border-radius: 50%;
+    background-color: $green;
+}
+
+input[type="checkbox"]:checked+span::after {
     opacity: 1;
 }
 
@@ -147,7 +174,8 @@ textarea {
     border-bottom: 0;
     pointer-events: none;
 }
-select {
+
+.form__select-wrap select {
     width: 100%;
     height: auto;
     font-size: rem(12);
@@ -214,6 +242,7 @@ select {
     display: flex;
     justify-content: center;
     text-indent: rem(-14);
+
     @include mq("md") {
         margin-top: rem(150);
     }
@@ -231,6 +260,6 @@ select {
     color: $white;
 }
 
-input.form__input-text--error{
+input.form__input-text--error {
     border: 1px solid #c94800;
 }

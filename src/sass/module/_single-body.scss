@@ -1,6 +1,6 @@
 @use "global" as *;
-.single-body {
-}
+
+.single-body {}
 
 .single-body__inner {
     max-width: rem(630);
@@ -21,6 +21,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
+
     @include mq("md") {
         width: rem(301);
         height: rem(138);
@@ -48,10 +49,12 @@
     padding-bottom: rem(4);
     margin-top: rem(8);
     border-bottom: rem(1) solid $green;
+
     @include mq("md") {
         font-size: rem(32);
     }
 }
+
 .single-body__title h1 {
     font-size: rem(24);
     font-weight: $medium;
@@ -67,6 +70,7 @@
 .single-body__img,
 .single-body__content {
     margin-top: rem(24);
+
     @include mq("md") {
         margin-top: rem(40);
     }
@@ -85,6 +89,7 @@
     font-weight: $regular;
     line-height: calc(24 / 16);
     color: $green2;
+
     @include mq("md") {
         margin-top: rem(40);
     }
@@ -92,6 +97,7 @@
 
 .single-body__content img {
     margin-top: rem(24);
+
     @include mq("md") {
         margin-top: rem(40);
     }
@@ -99,6 +105,7 @@
 
 .single-body__content ul {
     margin-top: rem(24);
+
     @include mq("md") {
         margin-top: rem(40);
     }
@@ -110,13 +117,14 @@
     line-height: calc(24 / 16);
     color: $green2;
     padding-left: rem(27);
-    @include mq("md") {
-    }
+
+    @include mq("md") {}
 }
 
 .single-body__content li span {
     position: relative;
 }
+
 .single-body__content li span::before {
     position: absolute;
     display: inline-block;
@@ -136,6 +144,7 @@
         width: 64.8%;
     }
 }
+
 .single-body__body:nth-child(2) {
     @include mq("md") {
         width: 100%;

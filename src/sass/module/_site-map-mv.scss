@@ -1,6 +1,8 @@
 @use "global" as *;
+
 .site-map-mv {
     background-image: url(../images/common/site-map-sp-img.jpg);
+
     @include mq("md") {
         background-image: url(../images/common/site-map-pc-img.jpg);
     }

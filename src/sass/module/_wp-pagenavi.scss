@@ -1,9 +1,11 @@
 @use "global" as *;
+
 .wp-pagenavi {
     display: flex;
     justify-content: center;
     gap: rem(12);
 }
+
 .wp-pagenavi a,
 .wp-pagenavi span {
     display: inline-flex;
@@ -19,12 +21,14 @@
     font-family: $number-font;
     transition: 0.3s ease;
 }
+
 .wp-pagenavi a:hover {
     color: $white;
     background-color: $green;
     border-color: $green;
 
 }
+
 .wp-pagenavi span.current {
     color: $white;
     background-color: $green;
@@ -44,6 +48,7 @@
 
 .wp-pagenavi--pc {
     display: none;
+
     @include mq("md") {
         display: block;
     }
@@ -72,10 +77,11 @@
 }
 
 .previouspostslink:hover::after {
-    background-image: url(../images/common/pagenavi-prev-white.png); /* ホバー時の画像パス */
+    background-image: url(../images/common/pagenavi-prev-white.png);
+    /* ホバー時の画像パス */
 }
 
 .nextpostslink:hover::after {
-    background-image: url(../images/common/pagenavi-next-white.png); /* ホバー時の画像パス */
+    background-image: url(../images/common/pagenavi-next-white.png);
+    /* ホバー時の画像パス */
 }
-

@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.information-card {
-}
+.information-card {}
 
 .information-card__wrapper {
     display: flex;
     flex-direction: column;
+
     @include mq("md") {
         flex-direction: row;
         justify-content: space-between;
@@ -21,6 +21,7 @@
 .information-card__img {
     aspect-ratio: 345 / 227;
     object-fit: cover;
+
     @include mq("md") {
         aspect-ratio: 540 / 358;
     }
@@ -28,6 +29,7 @@
 
 .information-card__body {
     margin-top: rem(24);
+
     @include mq("md") {
         padding-top: rem(61);
         margin-top: rem(0);
@@ -44,6 +46,7 @@
     color: $green2;
     padding-bottom: rem(2);
     border-bottom: rem(1) solid $green;
+
     @include mq("md") {
         font-size: rem(24);
         line-height: 1.5;
@@ -61,12 +64,11 @@
 .information-card__button {
     margin-top: rem(38);
     text-align: center;
-    @include mq("md") {
-    }
+
+    @include mq("md") {}
 }
 
-.information-card__button-link {
-}
+.information-card__button-link {}
 
 .information--border {
     padding: rem(24);
@@ -75,13 +77,16 @@
 
 .information-card__img-wrap--page {
     margin-top: rem(8);
+
     @include mq("md") {
         margin-left: rem(48);
     }
 }
+
 .information-card__img--page {
     aspect-ratio: 297 / 189;
     object-fit: cover;
+
     @include mq("md") {
         max-width: rem(492);
         aspect-ratio: 492 / 313;
@@ -90,9 +95,8 @@
 
 .information-card__body--page {
     margin-top: 0;
+
     @include mq("md") {
         margin-left: 0;
     }
 }
-
-
