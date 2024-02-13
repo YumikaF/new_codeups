@@ -1,12 +1,6 @@
 @use "global" as *;
 
-.thanks {
-    margin-top: rem(52);
-
-    @include mq("md") {
-        margin-top: rem(150);
-    }
-}
+.thanks {}
 
 .thanks__inner {
     position: relative;

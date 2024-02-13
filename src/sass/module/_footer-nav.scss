@@ -91,3 +91,8 @@
 .footer-nav__right-item+.footer-nav__right-item {
     margin-top: rem(24);
 }
+
+.footer-nav__left-item--color:first-child a::before,
+.footer-nav__right-item--color:first-child a::before {
+    background-image: url(../images/common/site-map-menu-icon.png);
+}

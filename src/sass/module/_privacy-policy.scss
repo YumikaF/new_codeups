@@ -1,12 +1,6 @@
 @use "global" as *;
 
-.privacy-policy {
-    margin-top: rem(52);
-
-    @include mq("md") {
-        margin-top: rem(150);
-    }
-}
+.privacy-policy {}
 
 .privacy-policy__inner {
     position: relative;
