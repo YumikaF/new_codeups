@@ -1,23 +1,14 @@
 @use "global" as *;
 
 
-// .aside-accordion__lists-title {
-//     cursor: pointer;
-// }
+.aside-archive {
+    cursor: pointer;
+}
 
-
-// .aside-accordion__list {
-//     display: none;
-
-// }
 
 .aside-archive__content:not(:first-child) {
     text-indent: 3ch;
 }
-
-
-
-.aside-accordion__item {}
 
 .aside-archive__toggle,
 .aside-archive__content a {
@@ -27,23 +18,19 @@
 }
 
 .aside-archive__toggle span,
-.aside-archive__content a{
+.aside-archive__content a {
     padding-left: rem(30);
     position: relative;
 }
 
-// .aside-accordion__list-link span {
-//     padding-left: rem(30);
-//     position: relative;
-// }
 
-
-.aside-archive__toggle span::before{
+.aside-archive__toggle span::before {
     position: absolute;
     content: "";
     top: 58%;
     left: 0;
     transform: translateY(-50%);
+    transition: transform 0.3s, opacity 0.3s;
     width: 0;
     height: 0;
     border-style: solid;
@@ -53,7 +40,27 @@
     border-bottom: 0;
 }
 
-.aside-archive__content a::before{
+.aside-archive__toggle span:hover::before {
+    opacity: 0.8;
+}
+
+
+.aside-archive__toggle.is-open span::before {
+    position: absolute;
+    content: "";
+    top: 58%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: rem(11) solid transparent;
+    border-bottom: rem(11) solid transparent;
+    border-left: rem(18) solid $green;
+    border-right: 0;
+}
+
+.aside-archive__content a::before {
     position: absolute;
     content: "";
     top: 58%;
